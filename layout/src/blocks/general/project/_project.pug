@@ -1,0 +1,40 @@
+mixin project(title,eq,expanded,titleEq='title')
+  .cell.project(data-equalizer-watch=eq)
+    .grid-x
+      .cell.small-5.medium-24
+        a(href='#' title='')
+          if title == 'video'
+            img.project__img(src='./i/video.svg' alt=title)
+          else
+            img.project__img(src='./i/photo.svg' alt=title)
+      .cell.small-18.medium-24.small-offset-1.medium-offset-0
+        if title == 'video'  
+          .project__title(data-equalizer-watch=titleEq): a(href='#' title='') Приняли на комплексное обслуживание новый сайт компании
+          i.far.fa-eye.project__icon
+          span.project__views 128
+          i.far.fa-clock.project__icon
+          span.project__views 3:33
+        else
+          .project__title(data-equalizer-watch=titleEq): a(href='#' title='')
+            if title
+              | #{title}
+            else
+              | Мобильная разработка    
+            
+    if eq == 'readCommentTile'
+      block
+      .show-for-medium Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
+      a(href='smi-article.html') Читать
+        i.fas.fa-long-arrow-alt-right.canv
+    else          
+      if title != 'video'        
+        if expanded
+          a.project__cat(href='#') Экономика  
+        .show-for-medium        
+          if block
+            block
+          else
+            | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
+        if expanded
+          a(href='smi-article.html') Читать
+            i.fas.fa-long-arrow-alt-right.canv

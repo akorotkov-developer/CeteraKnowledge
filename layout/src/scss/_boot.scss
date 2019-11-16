@@ -1,0 +1,28 @@
+.boot {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: rem-calc(50);
+
+    &__svg {
+        padding-right: rem-calc(15);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem-calc(13);
+        display: inline;
+        border-bottom: rem-calc(1) solid #ccc;
+        color: #000;
+        margin-bottom: rem-calc(2);
+    }
+
+    &__info {
+        width: calc(100% - 55px);
+    }
+
+    &__size {
+        font-size: rem-calc(12);
+        font-weight: 400;
+        color: #929A9C;
+    }
+}

@@ -1,0 +1,5 @@
+mixin step(text,disabled,isAll)
+  -var id =  Math.ceil(Math.random() * 10000);
+  .step(class=isAll?"step_all":"")
+    input.step__input(type="checkbox" id=id disabled=disabled)
+    label.step__label(for=id) !{text}

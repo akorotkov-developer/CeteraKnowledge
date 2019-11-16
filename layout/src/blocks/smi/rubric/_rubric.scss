@@ -1,0 +1,21 @@
+.rubric {
+  padding-top: rem-calc(10);
+  padding-bottom: rem-calc(10);
+  background: $main-color;
+
+  &__tgl {
+    color: $secondary-color;
+    font-size: rem-calc(21);
+    cursor: pointer;
+  }
+
+  &__menu {
+    margin-left: rem-calc(4);
+    font-weight: $global-weight-bold;
+    display: inline-block;
+  }
+  @include breakpoint(small only) {
+    padding-top: rem-calc(0);
+    padding-bottom: rem-calc(0);
+  }
+}

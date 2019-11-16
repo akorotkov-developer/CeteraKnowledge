@@ -1,0 +1,36 @@
+.file {
+    &__input {
+        display: none;
+    }
+
+    &__button {
+        cursor: pointer;
+        border-radius: rem-calc(4);
+        border: rem-calc(1) solid #929A9C;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        height: rem-calc(50);
+        padding-top: rem-calc(10);
+        font-size: rem-calc(16);
+
+        svg {
+            position: relative;
+            top: rem-calc(2);
+        }
+    }
+
+    &__select {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__name {
+        font-size: rem-calc(14);
+        padding-left: rem-calc(29);
+        font-weight: 500;
+        color: $quaternary;
+        text-transform: none;
+        padding-top: rem-calc(15);
+    }
+}

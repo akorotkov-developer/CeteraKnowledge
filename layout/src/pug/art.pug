@@ -1,0 +1,35 @@
+extends shop-index
+
+block page
+    +breadcrumbs(['Главная','Статьи','Название статьи заголовок'])
+    .grid-container.info.info_null
+        h1 Название статьи заголовок
+        .button.button_label самоходные
+        .button.button_label газонокосилки
+        .button.button_label садовый трактор
+        .button.button_label сервис
+        .button.button_label ремонт
+        .button.button_label трактора с выбросом
+
+        .grid-x.grid-padding-x.state
+            .cell: p.state__img: img(src="./i/image.jpg", alt="")
+            .large-13.cell.state__main  
+                p <strong>MTD Products Inc.</strong> является одним из крупнейших производителей садово-паркового оборудования. Штаб-квартира компании располагается в Кливленде, США, а производственные мощности находятся в Америке, Европе и Китае.
+                p Компания MTD - the Modern Tool and Die Company (Современный Инструмент и Литьё) - была основана в 1932 году тремя немецкими инженерами, эмигрировавшими в США. Компания MTD - the Modern Tool and Die Company (Современный Инструмент и Литьё) - была основана в 1932 году тремя немецкими инженерами, эмигрировавшими в США. Компания MTD - the Modern Tool and Die Company (Современный Инструмент и Литьё) - была основана в 1932 году тремя немецкими инженерами, эмигрировавшими в США.
+                p За 80 с лишним лет компания выросла до международного предприятия с филиалами по всему миру. В 2009 году компания открыла Представительство MTD на территории Российской Федерации. Все эти годы компания добивалась успеха благодаря своему квалифицированному персоналу, стратегическому внедрению инноваций и ориентации на потребителя. В России продукция компании представлена основными товарными брендами MTD, Cub Cadet и WOLF-Garten. Под брендом Arnold осуществляется поставка расходных материалов для техники.
+                p В 2017 году в холдинг MTD расширил список брендов и географию производств ещё одним заводом в Израиле. В ассортименте появились газонокосилки-роботы и торговая марка Robomow.
+            .large-11.cell.text-center
+                .state__earth
+
+                  a(href="./i/b1.jpg" data-fancybox="gallery" style="background-image:url(./i/b1.jpg);").state__block
+
+                  a(href="./i/b2.jpg" data-fancybox="gallery" style="background-image:url(./i/b2.jpg);").state__block.state__block_second
+                  .state__vertical
+                    a(href="./i/b3.jpg" data-fancybox="gallery" style="background-image:url(./i/b3.jpg);").state__block.state__block_mini
+                    a(href="./i/b4.jpg" data-fancybox="gallery"  style="background-image:url(./i/b4.jpg);").state__block.state__block_mini
+                        .state__num 12+
+                      
+                .text-right
+                    .youtube.youtube_curved
+                        .youtube__main(data-embed='lM02vNMRRB0')
+                            .youtube__button

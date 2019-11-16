@@ -1,0 +1,44 @@
+.params {
+    text-align: center;
+    display: none;
+    margin-left: rem-calc(-14);
+    margin-right: rem-calc(-14);
+    border-bottom: rem-calc(1) solid #CAD2D5;
+
+    &.js-active {
+        .params__arr {
+            transform: rotate(180deg);
+            top: rem-calc(17);
+        }
+    }
+
+    &__title {
+        padding-top: rem-calc(14);
+        padding-bottom: rem-calc(14);
+        color: #666E6F;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        padding-left: rem-calc(15);
+        position: relative;
+        padding-right: rem-calc(15);
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    &__filter {
+        position: absolute;
+        left: rem-calc(-6);
+        top: rem-calc(15);
+    }
+
+    &__arr {
+        position: absolute;
+        right: rem-calc(0);
+        top: rem-calc(13);
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+    @include breakpoint(small only) {
+        display: block;
+    }
+}

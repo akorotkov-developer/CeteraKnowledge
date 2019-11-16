@@ -1,0 +1,10 @@
+.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium')
+  +button
+    .button.button_expanded(data-toggle)
+      i.fas.fa-lg.fa-bars.picture
+      | Навигация
+.side#menu-left
+  ul.partners
+    li.partners__item: a(href='#' title='').partners__link.partners__link_active Главная
+    each title in ['О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация']
+      li.partners__item: a(href='#' title='').partners__link= title

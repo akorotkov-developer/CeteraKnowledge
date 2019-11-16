@@ -1,0 +1,42 @@
+# unknown
+statscache/**
+cap/**
+
+# bitrix
+managed_cache/**
+bitrix/cache/**
+bitrix/updates/**
+stack_cache/**
+bitrix/backup/**
+upload/**
+uploads/**
+bitrix/html_pages/**
+bitrix/wizards/**
+
+# cetera
+imagetransform/**
+cms_backup_*/**
+fastsite.ru/www/download/**
+.cache/**
+.smarty/**
+
+# umi
+sys-temp/static-cache/**
+sys-temp/manifest/**
+sys-temp/sitemap/**
+sys-temp/sphinx/**
+sys-temp/updates/**
+sys-temp/uploads/**
+sys-temp/yml/**
+
+# common
+upload/**
+uploads/**
+logs/**
+.logs/**
+_cache/**
+tmp/**
+*.sql
+*.log
+sitemap*.xml
+.ftpaccess

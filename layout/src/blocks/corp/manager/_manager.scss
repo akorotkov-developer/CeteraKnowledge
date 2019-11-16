@@ -1,0 +1,18 @@
+.manager {
+  text-align: center;
+
+  &__img {
+    width: rem-calc(150);
+  }
+
+  &__text {
+    font-size: rem-calc(13);
+    font-weight: $global-weight-bold;
+  }
+
+  &__block {
+    font-size: rem-calc(28);
+    @include margin-level(bottom,red);
+  }
+
+}

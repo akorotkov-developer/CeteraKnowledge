@@ -1,0 +1,47 @@
+mixin comp()
+  table.comp
+    if block
+      block
+    else
+      tr.comp__tr
+        td
+          a.comp__clear(href="#" title='')
+            | #[i.fas.fa-lg.fa-times-circle] Очистить список
+        td
+          +tile('instock')
+        td
+          +tile
+        td
+          +tile('instock','incart')
+        td
+          +tile
+        td
+          +tile
+      tr
+        th.comp__small Вес
+        td 25кг
+        td 35кг
+        td 30кг
+        td 31кг
+        td 27,5кг
+      tr
+        th.comp__small Мощность
+        td 0,25-160
+        td 0,30-180
+        td 0,25-155
+        td 0,30-180
+        td 0,30-170
+      tr
+        th.comp__small Передаточное отношение
+        td 4,8:1
+        td 4,7:1
+        td 4,8:1
+        td 4,6:1
+        td 4,8:1
+      tr
+        th.comp__small Количество подшипников
+        td 1шт
+        td 1+1шт
+        td —
+        td 1шт
+        td —

@@ -1,0 +1,125 @@
+.acc {
+    padding-bottom: rem-calc(15);
+    transition: 0.3s;
+
+    &.is-active {
+        padding-bottom: rem-calc(0);
+
+        .acc__arr {
+            transform: rotate(180deg);
+            top: rem-calc(2);
+        }
+
+        .acc__text {
+            border-bottom-color: transparent;
+        }
+    }
+
+    &__title {
+        cursor: pointer;
+        font-size: rem-calc(24);
+        margin-bottom: rem-calc(23);
+        font-weight: 600;
+        color: #000;
+        display: inline-flex;
+        flex-flow: row wrap;
+        line-height: 1.1;
+    }
+
+    &__cell {
+        &_out {
+            opacity: 0.3;
+        }
+    }
+
+    &__row {
+        display: flex;
+        transform: translateX(0);
+        transition: 0.3s;
+        flex-flow: row wrap;
+    }
+
+    &__text {
+        display: inline-block;
+        border-bottom: rem-calc(1) dotted #CAD2D5;
+    }
+
+    &__name {
+        font-size: rem-calc(16);
+        font-weight: 400;
+        margin-bottom: rem-calc(25);
+        color: #000;
+    }
+
+    &__content {
+        margin-bottom: rem-calc(25);
+    }
+
+    &__manufacture {
+        color: #929A9C;
+        font-size: rem-calc(16);
+        font-weight: 400;
+    }
+
+    &__arr {
+        position: relative;
+        display: inline-block;
+        margin-left: rem-calc(12);
+        transform: rotate(0deg);
+        top: rem-calc(-2);
+        transition: 0.3s;
+    }
+    @include breakpoint(small only) {
+        &__manufacture {
+            font-size: rem-calc(14);
+            padding-left: rem-calc(15);
+        }
+
+        &__title {
+            margin-bottom: rem-calc(13);
+        }
+
+        &.is-active {
+            .acc__title {
+                margin-bottom: rem-calc(10);
+            }
+
+            .acc__content {
+                margin-bottom: rem-calc(8);
+            }
+
+            .acc__arr {
+                top: rem-calc(19);
+            }
+        }
+
+      
+
+        &__name {
+            margin-bottom: rem-calc(5);
+            font-size: rem-calc(14);
+        }
+
+        &__arr {
+            top: rem-calc(-9);
+            width: rem-calc(10);
+            height: rem-calc(6);
+            margin-left: rem-calc(0);
+
+            svg {
+                width: rem-calc(10);
+                height: rem-calc(6);
+            }
+        }
+
+        &__row {
+            padding-left: rem-calc(15);
+        }
+
+        &__text {
+            font-size: rem-calc(14);
+            font-weight: 600;
+            margin-right: rem-calc(9);
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.grid-container: .grid-x.grid-padding-x: .cell
+  h2 Наши клиенты
+  .grid-x.grid-padding-x.small-up-2.medium-up-4.large-up-8.text-center.info
+    - var n = 0
+    while n < 8
+      .cell
+        +client
+      - n++

@@ -1,0 +1,59 @@
+$levels: (
+  //          640            960          1200          1440            1920           1920+
+  blue:   (rem-calc(4),  rem-calc(4),  rem-calc(4),  rem-calc(4),   rem-calc(12),  rem-calc(12),),
+  /*2xs*/
+  red:    (rem-calc(8),  rem-calc(16), rem-calc(16), rem-calc(16),  rem-calc(24),  rem-calc(24),),
+  /*xs*/
+  orange: (rem-calc(12), rem-calc(24), rem-calc(24), rem-calc(24),  rem-calc(32),  rem-calc(32),),
+  /*s*/
+  yellow: (rem-calc(16), rem-calc(32), rem-calc(32), rem-calc(32),  rem-calc(40),  rem-calc(40),),
+  /*m*/
+  green:  (rem-calc(24), rem-calc(40), rem-calc(40), rem-calc(48),  rem-calc(56),  rem-calc(56),),
+  /*l*/
+  cyan:   (rem-calc(28), rem-calc(48), rem-calc(48), rem-calc(64),  rem-calc(80),  rem-calc(80),),
+  /*xl*/
+  violet: (rem-calc(36), rem-calc(72), rem-calc(72), rem-calc(96),  rem-calc(120), rem-calc(120),),
+  /*2xl*/
+  pink:   (rem-calc(56), rem-calc(96), rem-calc(96), rem-calc(120), rem-calc(152), rem-calc(152),),
+  /*3xl*/
+);
+@mixin margin-level($direction, $type,$sign:1) {
+  $last-num: 6;
+  $margin-array: map-get($levels, $type);
+  margin-#{$direction}: $sign* nth($margin-array, $last-num);
+  @media all and (max-width: map_get($breakpoints, 'xxxlarge')) {
+    margin-#{$direction}: $sign* nth($margin-array, 5);
+  }
+  @media all and (max-width: map_get($breakpoints, 'xxlarge')) {
+    margin-#{$direction}: $sign* nth($margin-array, 4);
+  }
+  @media all and (max-width: map_get($breakpoints, 'xlarge')) {
+    margin-#{$direction}: $sign* nth($margin-array, 3);
+  }
+  @media all and (max-width: map_get($breakpoints, 'large')) {
+    margin-#{$direction}: $sign* nth($margin-array, 2);
+  }
+  @media all and (max-width: map_get($breakpoints, 'medium')) {
+    margin-#{$direction}: $sign* nth($margin-array, 1);
+  }
+}
+@mixin padding-level($direction, $type) {
+  $last-num: 6;
+  $padding-array: map-get($levels, $type);
+  padding-#{$direction}: nth($padding-array, $last-num);
+  @media all and (max-width: map_get($breakpoints, 'xxxlarge')) {
+    padding-#{$direction}: nth($padding-array, 5);
+  }
+  @media all and (max-width: map_get($breakpoints, 'xxlarge')) {
+    padding-#{$direction}: nth($padding-array, 4);
+  }
+  @media all and (max-width: map_get($breakpoints, 'xlarge')) {
+    padding-#{$direction}: nth($padding-array, 3);
+  }
+  @media all and (max-width: map_get($breakpoints, 'large')) {
+    padding-#{$direction}: nth($padding-array, 2);
+  }
+  @media all and (max-width: map_get($breakpoints, 'medium')) {
+    padding-#{$direction}: nth($padding-array, 1);
+  }
+}

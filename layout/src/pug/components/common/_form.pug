@@ -1,0 +1,55 @@
+h3 Выберите необходимый набор услуг — получите предложение через 5 минут
+form
+  +callout('callout_alert')
+    h5 Это заголовок сообщения
+    p Пользователь может закрыть сообщение. Закрытие анимировано с помощью Motion UI.
+    button.close-button(aria-label='Dismiss alert', type='button', data-close='')
+      span(aria-hidden='true') &times;
+  +callout('callout_success')
+    h5 Это заголовок сообщения
+    p Пользователь может закрыть сообщение. Закрытие анимировано с помощью Motion UI.
+    button.close-button(aria-label='Dismiss alert', type='button', data-close='')
+      span(aria-hidden='true') &times;
+  +callout
+    .grid-x.grid-padding-x.medium-up-2.large-up-3.text-center
+      - n = 0
+      each title in ['Консультирование', 'Дизайн (сайты, баннеры, схемы и прочие изображения для нужд интернета)', 'Вёрстка HTML-страниц и сайтов', 'Вёрстка HTML-страниц и сайтов', 'Программирование', 'Тестирование разработанных сайтов и сервисов', 'Размещение сайтов или администрирование серверов', 'Публикация текстовых материалов на сайты', 'Обучение Заказчика использованию сайтов', 'Интеграция с внешними системами', 'Управление продвижением']
+        .cell
+          +switch(title)
+        - n++
+    hr
+    .grid-x.grid-padding-x
+      .medium-12.large-6.cell
+        label
+          | Текстовое поле
+          input(type='text', placeholder='large-4.cell')
+      .medium-12.large-6.cell
+        label
+          | Текстовое поле
+          input(type='text', placeholder='large-4.cell')
+      .medium-12.large-6.cell
+        .grid-x
+          label Текстовое поле
+          .small-18.cell
+            input(type='text', placeholder='small-9.cell')
+          .small-6.cell.align-self-middle
+            span.sect.sect_dib .com
+      .medium-12.large-6.cell
+        label
+          | Выпадающий список
+          select
+            option(value='husker') Husker
+            option(value='starbuck') Starbuck
+            option(value='hotdog') Hot Dog
+            option(value='apollo') Apollo
+    .grid-x.grid-padding-x
+      .large-12.cell
+        label
+          | Текстовое поле
+          input(type='text', placeholder='large-12.cell')
+      .large-12.cell
+        label
+          | Многострочная текстовая область
+          textarea(placeholder='small-12.cell')
+    .text-center
+      +button('Получите предложение через 5 минут<i class="fas fa-long-arrow-alt-right fa-lg canv"></i>','button_large')

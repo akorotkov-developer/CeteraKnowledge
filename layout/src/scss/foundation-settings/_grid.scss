@@ -1,0 +1,47 @@
+$global-lineheight: 1.6;
+$global-font-size: 14px;
+$global-width: rem-calc(1220);
+
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: 'Montserrat', Arial, sans-serif;
+$body-antialiased: true;
+$global-margin: 0.25rem;
+$global-padding: 0.25rem;
+$global-position: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: 700;
+$global-radius: rem-calc(4);
+$global-input-height: rem-calc(50);
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 960px,
+  xlarge: 1200px,
+  xxlarge: 1340px,
+  xxxlarge: 1920px,
+  giant: 2560px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large xlarge);
+
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-columns: 24;
+$grid-margin-gutters: (
+  small: rem-calc(28),
+  medium: rem-calc(16)
+);
+$grid-padding-gutters: $grid-margin-gutters;
+$grid-container-padding: $grid-padding-gutters;
+$grid-container-max: $global-width;
+$xy-block-grid-max: 8;

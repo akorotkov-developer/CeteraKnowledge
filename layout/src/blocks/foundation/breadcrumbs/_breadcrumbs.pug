@@ -1,0 +1,10 @@
+mixin breadcrumbs(navlinks=['Главная','Раздел','Путь до страницы','Страница'])
+  .grid-container: .grid-x.grid-padding-x: .cell
+    .breadcrumbs-wrap
+      ul.breadcrumbs
+        each key, index in Object.keys(navlinks)
+          if index >= Object.keys(navlinks).length - 1
+            li.current= navlinks[key]
+          else
+            li
+              a(href='#' title='')= navlinks[key]

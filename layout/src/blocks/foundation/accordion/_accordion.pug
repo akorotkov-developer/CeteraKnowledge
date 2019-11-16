@@ -1,0 +1,33 @@
+mixin accordion(array)
+  ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+    if block
+      block
+    else
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Почему я не могу загрузить конфигурацию программы клиента Mobile VPN with SSL из Firebox? [WSM/Fireware XTM v11.x]
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Как настроить WatchGuard Mobile VPN для Windows Mobile? [WSM/Fireware XTM v11.x]
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Установка и настройка ПО клиента Mobile VPN with IPSec для конечных пользователей?
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Какие права необходимы на компьютере для запуска клиента Mobile VPN with SSL?
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Есть ли версия клиента Mobile VPN for IPSec для Mac OS X? [WSM/Fireware XTM v11.x]
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Настройка Mobile VPN with IPSec для работы с Firebox, у которого динамический внешний IP адрес?
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq
+      li.accordion-item(data-accordion-item)
+        a.accordion-title(href="#") Что такое группы Diffie-Hellman и чем они отличаются друг от друга?
+        div.accordion-content(data-tab-content)
+          include ../../../pug/components/common/_faq

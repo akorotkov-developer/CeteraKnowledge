@@ -1,0 +1,43 @@
+.client {
+    background-size: cover;
+    background-position: center;
+    padding-top: rem-calc(38);
+    padding-bottom: rem-calc(38);
+
+    &__info {
+        padding-bottom: rem-calc(80);
+        padding-top: rem-calc(60);
+    }
+
+    &__align {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    @include breakpoint(medium down) {
+        &__info {
+            padding-bottom: rem-calc(30);
+            padding-top: rem-calc(30);
+        }
+    }
+    @include breakpoint(small only) {
+      background-size: 0;
+      padding-bottom: rem-calc(0);
+      padding-top: rem-calc(0);
+
+        &__prime {
+          padding-top: rem-calc(38);
+            background: $primary-color;
+            padding-bottom: rem-calc(60);
+        }
+
+        &__bank {
+          padding-bottom: rem-calc(20);
+          padding-top: rem-calc(24);
+            background:  rgba(233, 240, 242, 0.51) ;
+        }
+
+        &__info {
+            padding-top: rem-calc(0);
+        }
+    }
+}

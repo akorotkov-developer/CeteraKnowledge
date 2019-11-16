@@ -1,0 +1,9 @@
+.hr {
+    margin-bottom: rem-calc(31);
+    border-bottom: rem-calc(1) solid rgba(255, 255, 255, 0.2);
+
+    &_new {
+        border-bottom-color: #CAD2D5;
+        margin-bottom: rem-calc(30);
+    }
+}

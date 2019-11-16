@@ -1,0 +1,55 @@
+.accordion {
+    background: none;
+    border: rem-calc(0);
+
+    &-content {
+        border: rem-calc(0);
+        background: none;
+        padding: rem-calc(0 0 20);
+    }
+
+    &-title {
+        padding-top: rem-calc(0);
+        border: rem-calc(0);
+        font-weight: 600;
+        font-size: rem-calc(14);
+        background: none;
+        padding-left: rem-calc(0);
+        padding-bottom: rem-calc(8);
+        padding-right: rem-calc(0);
+        color: #000;
+        pointer-events: none;
+
+        &:before {
+            display: none;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $white;
+            outline: none;
+            background: rgba(255, 255, 255, 0.34);
+        }
+    }
+
+    .is-active {
+        & > a {
+            color: #000;
+            background: none;
+        }
+    }
+
+    &-item {
+        border: rem-calc(0);
+    }
+    @include breakpoint(small only) {
+      padding-top: rem-calc(30);
+        &-title {
+            font-size: rem-calc(14);
+        }
+        &__info {
+          display:flex; flex-flow: row wrap;
+        }
+    }
+}

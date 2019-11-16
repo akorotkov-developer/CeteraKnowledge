@@ -1,0 +1,13 @@
+mixin slider(min,max)
+  -var randId1 =  Math.ceil(Math.random() * 1000);
+  -var randId2 =  Math.ceil(Math.random() * 1000);
+  -var initialStart = (max + min)/4;
+  -var initialEnd = (max + min)*0.75;
+  .grid-x.grid-padding-x
+    .small-12.cell: input.power(type="number" id=randId1)
+    .small-12.cell: input.power(type="number" id=randId2)
+  .slider(data-slider data-start=min data-end=max data-initial-start=initialStart data-initial-end=initialEnd data-binding="true")
+    span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls=randId1)
+    span.slider-fill(data-slider-fill)
+    span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls=randId2)
+  

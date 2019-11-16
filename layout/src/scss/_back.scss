@@ -1,0 +1,28 @@
+.back {
+    display: inline-block;
+    color: #000;
+    font-size: rem-calc(14);
+    font-weight: 400;
+    margin-top: rem-calc(19);
+    margin-bottom: rem-calc(35);
+
+    svg {
+        width: rem-calc(18);
+        position: relative;
+        top: rem-calc(3);
+        height: rem-calc(18);
+        margin-right: rem-calc(5);
+    }
+
+    &_info {
+        margin-top: rem-calc(39);
+    }
+    @include breakpoint(small only) {
+        margin-top: rem-calc(19);
+        margin-bottom: rem-calc(22);
+        &_info {
+          margin-bottom: rem-calc(14);
+
+        }
+    }
+}

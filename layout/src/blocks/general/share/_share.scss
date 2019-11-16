@@ -1,0 +1,20 @@
+.share {
+  @include margin-level(bottom,red);
+  font-size: rem-calc(28);
+
+  &__text {
+    color: $tertiary;
+    font-size: rem-calc(14);
+    margin-right: rem-calc(8);
+  }
+
+  &__enter {
+    font-size: rem-calc(14);
+    margin-right: rem-calc(8);
+  }
+  @include breakpoint(medium down) {
+    &__text {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
++contacts
+  .grid-container: .grid-x.grid-padding-x
+    .large-8.cell.medium-order-2
+      .contacts__info
+        span.contacts__menu(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+          span(data-toggle): i.fas.fa-bars.fa-lg
+        +cities
+    .large-16.cell.medium-order-1
+      .contacts__cab#responsive-menu
+        +menu-top(['Доставка', 'Оплата', 'Контакты', 'Помощь'])

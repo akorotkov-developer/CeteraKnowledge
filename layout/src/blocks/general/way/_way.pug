@@ -1,0 +1,7 @@
+mixin way(array)
+  .way
+    span.picture Путь:
+    a(href='#' title='') Главная
+    each title in array
+      span.way__pole /
+      a(href='#' title='')= title

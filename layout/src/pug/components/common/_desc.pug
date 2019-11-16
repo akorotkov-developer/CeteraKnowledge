@@ -1,0 +1,165 @@
+.part
+  .part__grid: .grid-container.part__cont: ul#tabs-2.tabs(data-responsive-accordion-tabs="accordion large-tabs")
+    li.tabs-title.is-active
+      a( href='#panel11') Описание
+    li.tabs-title
+      a(data-tabs-target='panel12', href='#panel12') Технические характеристики
+    li.tabs-title
+      a(data-tabs-target='panel13', href='#panel13') Отзывы
+      span.tabs__counter 12
+    li.tabs-title
+      a(data-tabs-target='panel14', href='#panel14') Инструкции
+      span.tabs__counter 8
+    li.tabs-title
+      a(data-tabs-target='panel15', href='#panel15') Доставка и оплата
+    li.tabs-title
+      a(data-tabs-target='panel16', href='#panel16') Почему мы?
+      
+  .grid-container: .tabs-content(data-tabs-content='tabs-2')
+    #panel11.tabs-panel.is-active
+      .grid-x.grid-padding-x.tabs__info
+        .large-21.cell
+          .info: .youtube
+              .youtube__main(data-embed='lM02vNMRRB0')
+                  .youtube__button
+        .large-17.cell          
+          h4 Бензиновая газонокосилка Cub Cadet LM1 CPB46
+          p Любому садоводу хочется, чтобы его газон выглядел живым и зеленым. Придать приусадебному участку привлекательный дизайн поможет бензиновая газонокосилка марки Cub Cadet LM1 CPB46, реализуемая по доступной цене нашей компанией.
+          h5 Устройство оснащено тремя опциями скашивания:
+          ul
+            li сбор травяных частиц в травонакопитель;
+            li задний выброс;
+            li мульчирование (опция), при котором скошенные элементы травы многократно измельчаются и становятся естественным удобрением для верхнего почвенного слоя.
+          p Поступившая с удобрением влага, создаст оптимальные условия для роста травяного покрова.
+          p Наличие объемного травосборника, выполненного из мягкой ткани, позволяет увеличить рабочий период агрегата. В конструкции травонакопителя имеется индикатор заполнения, своевременно сигнализирующий о необходимости опустошения отсека от избытка растительных частиц.
+      .tabs__info: include _tech
+      include _why
+      .grid-x.grid-padding-x: .cell: h4 Отзывы
+      .grid-x.grid-padding-x
+        include _comment
+        .cell
+          a(href="#").button.button_hollow Перейти к отзывам
+    #panel12.tabs-panel
+      .part__review: include _tech
+      
+    #panel13.tabs-panel
+      block review
+        .grid-x.grid-padding-x.part__review
+          include _comment
+          .large-8.cell
+            .callout
+              #callout(data-toggler=".hide").hide
+                .callout__title Написать отзыв
+                form(action="#")
+                  .value
+                    .value__placeholder Имя*
+                    input.value__input(type="text",value="Ирина")
+                  .value
+                    .value__placeholder Электронная почта*
+                    input.value__input(type="email",value="ageewa@gmail.com")
+                  .file
+                    .file__select
+                        label(for="chooseFile").file__button#infoFile
+                            include ../../../images/clip.svg
+                            span Фото товара
+                        .file__name#noFile
+                        input#chooseFile.file__input(type='file', name='chooseFile')
+                  .value
+                    .value__placeholder Ваш комментарий
+                    textarea.value__area
+                          
+              .text-center: a(data-toggle='callout').button.button_call Оставить отзыв
+              .callout__info Чтобы оставить отзыв нужно
+                br
+                a(href="#").callout__link войти
+                |  или 
+                a(href="#").callout__link зарегистрироваться
+    #panel14.tabs-panel
+      .grid-x.grid-padding-x.large-up-4.medium-up-2.part__review
+        for i in [1,2,3,4]
+          include _instr-2
+    #panel15.tabs-panel
+      .grid-x.grid-padding-x.part__review
+        .cell.large-12.tabs__thank Спасибо за выбор нашей компании! <br>Мы будем рады осуществить доставку
+        .cell.large-12.text-right
+          .tabs__pay
+            span.tabs__span Мы принимаем к оплате:
+            img(src="./images/pay.svg", alt="")
+              
+      .grid-x.grid-padding-x.align-justify
+        .cell.xlarge-6.medium-12: .delivery.delivery_mini
+            .grid-x.grid-padding-x
+              .shrink.cell
+                div
+                  img(src="./images/a1.svg", alt="")
+              .auto.cell.align-self-middle: .delivery__repr Доставка товара во все регионы России
+        .cell.xlarge-7.medium-12: .delivery.delivery_mini
+            .grid-x.grid-padding-x
+              .shrink.cell
+                div
+                  img(src="./images/a13.svg", alt="")
+              .auto.cell.align-self-middle: .delivery__repr Гарантия на все товары — от 12 месяцев
+  
+        .cell.xlarge-5.medium-12: .delivery.delivery_map
+            .grid-x.grid-padding-x
+              .shrink.cell
+                div
+                  img(src="./images/a22.svg", alt="")
+              .auto.cell.align-self-middle: .delivery__repr Доставка до любой ТК — бесплатно
+      
+        .cell.xlarge-6.medium-12: .delivery.delivery_mini
+            .grid-x.grid-padding-x
+              .shrink.cell
+                div
+                  img(src="./images/a23.svg", alt="")
+              .auto.cell.align-self-middle: .delivery__repr Доставка<br>в течении 1-2 дней
+      .grid-x.grid-padding-x: .cell
+        .tabs__h6 Москва и МО
+    
+      .grid-x.grid-padding-x
+        .xlarge-10.cell: .port
+          .grid-x.grid-padding-x
+            .medium-7.cell.port__title В пределах МКАД
+            .medium-10.cell
+              .port__price 500 ₽
+              .port__line до 30 000 ₽
+            .medium-7.cell
+              .port__price Бесплатно
+              .port__line до 30 000 ₽
+        .xlarge-10.cell: .port
+          .grid-x.grid-padding-x
+            .medium-7.cell.port__title За пределы МКАД
+            .medium-10.cell
+              .port__price 500 + 30 ₽/км
+              .port__line до 30 000 ₽
+            .medium-7.cell
+              .port__price 30 ₽/км
+              .port__line до 30 000 ₽
+      .grid-x.grid-padding-x: .cell: .tabs__import
+        include ../../../images/time.svg
+        span Доставляем в течение 3-х дней      
+      .grid-x.grid-padding-x
+        .cell
+          .tabs__h6 Регионы РФ
+        .cell.large-18
+          p Доставляем в регионы транспортными компаниями. Доставка до любой транспортной компании в пределах МКАД — <strong>бесплатная</strong>. Оплатить заказ можно наличным и безналичным расчётом.
+      .grid-x.grid-padding-x
+        .large-20.cell  
+          .grid-x.grid-padding-x.large-up-4.medium-up-2
+            .cell: a(href="#").fly
+              include ../../../i/i1.svg
+              .fly__text Рассчитать доставку
+            .cell: a(href="#").fly
+              include ../../../i/i2.svg
+              .fly__text Рассчитать доставку
+            .cell: a(href="#").fly
+              include ../../../i/i3.svg
+              .fly__text Рассчитать доставку
+            .cell: a(href="#").fly
+              include ../../../i/i4.svg
+              .fly__text Рассчитать доставку
+      
+
+    #panel16.tabs-panel
+      .part__review
+        include _why

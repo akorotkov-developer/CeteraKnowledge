@@ -1,0 +1,29 @@
+mixin carousel-services()
+  .carousel-services
+    if block
+      block
+    else
+      .carousel-services__item
+        .grid-container: .grid-x.grid-padding-x
+          .medium-10.cell.show-for-medium
+            img(src='./i/photo.svg', alt='1')
+          .medium-12.medium-offset-2.cell.align-self-middle
+            h2 Абонентское обслуживание
+            .carousel-services__text Удобный для клиентов формат обслуживания. Все услуги &mdash; по единой фиксированной цене. Часто &mdash; нулевая стоимость сайта до открытия.
+            +button('Узнать больше<i class="fas fa-long-arrow-alt-right canv"></i>','button_secondary')
+      .carousel-services__item
+        .grid-container: .grid-x.grid-padding-x
+          .medium-10.cell.show-for-medium
+            img(src='./i/photo.svg', alt='2')
+          .medium-12.medium-offset-2.cell.align-self-middle
+            h2 Быстрый старт
+            .carousel-services__text Откроем сайт в индивидуальном дизайне за 3 дня. Используем Cetera CMS и методологию запуска собственного авторства.
+            +button('Узнать больше<i class="fas fa-long-arrow-alt-right canv"></i>','button_secondary')
+      .carousel-services__item
+        .grid-container: .grid-x.grid-padding-x
+          .medium-10.cell.show-for-medium
+            img(src='./i/photo.svg', alt='3')
+          .medium-12.medium-offset-2.cell.align-self-middle
+            h2 Сайт и клиенты
+            .carousel-services__text Откроем сайт. Обеспечим поддержкой и развитием. Привлечем покупателей. Конвертируем в заявки. Организуем продажи.
+            +button('Узнать больше<i class="fas fa-long-arrow-alt-right canv"></i>','button_secondary')

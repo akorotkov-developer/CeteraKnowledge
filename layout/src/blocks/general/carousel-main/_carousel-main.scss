@@ -1,0 +1,68 @@
+.carousel-main {
+  text-align: center;
+  background: $main-color;
+  @include margin-level(bottom,yellow);
+
+  &__photo {
+    align-self: center;
+  }
+
+  &__img {
+    width: 100%;
+    @include margin-level(bottom,red);
+  }
+
+  &__item {
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: none;
+    padding: 2rem 3rem;
+    position: relative;
+
+    &:first-child {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: rem-calc(15);
+    margin-bottom: rem-calc(21);
+  }
+
+  &__content {
+    min-height: rem-calc(400);
+    &_white {
+      color: $white;
+    }
+  }
+
+  &__darken:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  @include breakpoint(medium down) {
+    &__content {
+      min-height: rem-calc(300);
+    }
+  }
+  @include breakpoint(small only) {
+    &__img {
+      display: none;
+    }
+
+    &__content {
+      min-height: unset;
+    }
+
+    &__item {
+      padding: 2rem 0;
+    }
+  }
+}

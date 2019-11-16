@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik.woff2') format('woff2'),
+        url('Graphik.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+$font-graphik: 'Graphik',sans-serif;

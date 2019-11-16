@@ -1,0 +1,32 @@
+.summit {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin-bottom: rem-calc(0);
+    margin-left: rem-calc(0);
+    margin-top: rem-calc(2);
+
+    &__link {
+        padding-bottom: rem-calc(8);
+        margin-right: rem-calc(23);display: inline-block;
+        border-bottom: rem-calc(2) solid transparent;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &_active {
+            border-bottom-color: $black;
+        }
+    }
+    @include breakpoint(small only) {
+        &__item {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__link {
+          border-bottom: rem-calc(0);
+            margin-right: rem-calc(0);
+        }
+    }
+}

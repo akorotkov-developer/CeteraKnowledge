@@ -1,0 +1,41 @@
+@import 'util/util';
+
+$foundation-palette: (
+  primary: #EFD643,
+  secondary: #333,
+  tertiary: #565656,
+  quaternary: #48626F,
+  success: #0ECC21,
+  warning: #EEB301,
+  alert: #cc4b37,
+  main: rgba(#fff,.7),
+  sky: #f2f2f2,
+  light-gray: #e6e6e6,
+  medium-gray: #cacaca,
+  dark-gray: #414141,
+  black: #000,
+  white: #fff,
+  fb: #3F619C,
+  vk: #3E709C,
+  twi: #2FA4CC,
+  ok: #FC6719,
+  insta: #000000,
+  gp: #DB4437
+);
+$main-color: map-get($foundation-palette, main);
+$secondary-color: map-get($foundation-palette, secondary);
+$light-gray: map-get($foundation-palette, light-gray);
+$medium-gray: map-get($foundation-palette, medium-gray);
+$dark-gray: map-get($foundation-palette, dark-gray);
+$black: map-get($foundation-palette, black);
+$white: map-get($foundation-palette, white);
+$sky: map-get($foundation-palette, sky);
+$tertiary: map-get($foundation-palette, tertiary);
+$quaternary: map-get($foundation-palette, quaternary);
+$fb: map-get($foundation-palette, fb);
+$vk: map-get($foundation-palette, vk);
+$twi: map-get($foundation-palette, twi);
+$ok: map-get($foundation-palette, ok);
+$insta: map-get($foundation-palette, insta);
+$gp: map-get($foundation-palette, gp);
+@include add-foundation-colors;

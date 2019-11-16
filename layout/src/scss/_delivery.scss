@@ -1,0 +1,55 @@
+.delivery {
+    margin-bottom: rem-calc(37);
+
+    &_mini {
+        margin-bottom: rem-calc(60);
+    }
+
+    &_map {
+        margin-bottom: rem-calc(60);
+        margin-left: rem-calc(-20);
+        margin-right: rem-calc(-20);
+    }
+
+    &__text {
+        font-size: rem-calc(18);
+        padding-left: rem-calc(4);
+        line-height: 1.222;
+        font-weight: 700;
+    }
+
+    &__repr {
+        font-weight: 400;
+        font-size: rem-calc(16);
+        line-height: 1.32;
+    }
+
+    &__wrap {
+        padding-left: rem-calc(52);
+    }
+    @include breakpoint(large down) {
+        &_map {
+            margin-left: rem-calc(0);
+            margin-right: rem-calc(0);
+        }
+    }
+    @include breakpoint(medium down) {
+        &__wrap {
+            padding-left: rem-calc(0);
+            height: rem-calc(39);
+            width: rem-calc(62);
+            text-align: right;
+
+            img {
+                max-height: rem-calc(39);
+            }
+        }
+    }
+    @include breakpoint(small only) {
+        &__text {
+            padding-left: rem-calc(0);
+            font-size: rem-calc(12);
+            font-weight: 400;
+        }
+    }
+}

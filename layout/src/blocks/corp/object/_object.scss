@@ -1,0 +1,8 @@
+.object {
+  @include margin-level(bottom,red);
+
+
+  &__img {
+    width: rem-calc(70);
+  }
+}

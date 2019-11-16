@@ -1,0 +1,52 @@
+.flag {
+    height: rem-calc(431);
+    background: url($imagesPath +"/flag.png")no-repeat center;
+    background-size: cover;
+    padding-left: rem-calc(33);
+    padding-right: rem-calc(33);
+    padding-top: rem-calc(30);
+    position: relative;
+    padding-bottom: rem-calc(90);
+    margin-top: rem-calc(16);
+
+    &__title {
+        font-size: rem-calc(24);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: rem-calc(24);
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    &__info {
+        font-size: rem-calc(20);
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    &__discount {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: rem-calc(50);
+        font-weight: 400;
+        position: absolute;
+        bottom: rem-calc(16);
+        width: 100%;
+        left: rem-calc(0);
+        padding-right: rem-calc(33);
+        padding-left: rem-calc(33);
+    }
+    @include breakpoint(large down) {
+        &__info {
+            font-size: rem-calc(16);
+        }
+        &__title {
+          font-size: rem-calc(22);
+        }
+
+        &__discount {
+            font-size: rem-calc(40);
+        }
+    }
+}

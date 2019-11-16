@@ -1,0 +1,29 @@
+extends shop-index
+
+block page
+  +breadcrumbs(['Главная','Сертификаты'])
+  
+  .grid-container
+    .grid-x.grid-padding-x
+      .cell.large-auto.medium-auto
+        h1 Сертификаты
+      .cell.large-16.text-left.large-text-right.hide-for-small-only
+        a(href="#").button.button_black.button_right Все       
+        a(href="#").button.button_hollow.button_right Сертификаты
+        a(href="#").button.button_hollow.button_right Свидетельства
+        a(href="#").button.button_hollow.button_right Информационные письма
+        .sect.show-for-small-only
+    .act
+      for i in [1,2,3,4,5,6]
+        .act__block
+          .grid-x.grid-padding-x
+            .shrink.cell.act__wrap
+              include ../images/pdf.svg
+              .act__size 2.5 Mb
+            .cell.auto
+              .act__info СЕРТИФИКАТ СООТВЕТСТВИЯ
+              .act__date 2017 – 2022 гг.
+              .act__title Травосборник для садовых тракторов с шириной деки 76 см - серия 45, 47
+              a(href="#").act__link Скачать
+      a(href="#").act__more
+        span.act__watch Смотреть еще  6 из 40

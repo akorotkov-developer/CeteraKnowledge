@@ -1,0 +1,38 @@
+.rating {
+    display: inline-flex;
+    flex-flow: row-reverse wrap;
+    cursor: pointer;
+    margin-bottom: rem-calc(11);
+
+    &_disabled {
+        pointer-events: none;
+    }
+
+    .rating__star {
+        display: block;
+        margin-left: rem-calc(0);
+    padding-right: rem-calc(8);
+    margin-right: rem-calc(0);
+        position: relative;
+        width: rem-calc(20);
+        height: rem-calc(12);
+        background: url($imagesPath +"/star-o.svg")no-repeat left center;
+        background-size: rem-calc(12 12);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+}
+
+.rating:not(:hover) .rating__input:checked .rating__star,
+.rating:not(:hover) .rating__input:checked ~ .rating__star,
+.rating__star:hover,
+.rating__star:hover ~ .rating__star {
+    background: url($imagesPath +"/star.svg")no-repeat left center;
+    background-size: rem-calc(12 12);
+}

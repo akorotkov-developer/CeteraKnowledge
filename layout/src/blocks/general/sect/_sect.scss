@@ -1,0 +1,80 @@
+.sect {
+    margin-bottom: rem-calc(20);
+
+    &_iframe {
+        height: rem-calc(350);
+        width: 100%;
+        border: rem-calc(0);
+    }
+
+    &_col {
+        width: 50%;
+    }
+
+    &_rect {
+        @include margin-level(bottom,blue);
+    }
+
+    &_primary {
+        color: $primary-color;
+    }
+
+    &_big {
+        font-size: rem-calc(18);
+    }
+
+    &_type {
+        @include margin-level(bottom,blue);
+        font-weight: $global-weight-bold;
+    }
+
+    &_date {
+        font-weight: $global-weight-bold;
+        color: $secondary-color;
+    }
+
+    &_time {
+        margin-bottom: rem-calc(0);
+        color: $dark-gray;
+    }
+
+    &_main {
+        background: $main-color;
+    }
+
+    &_dib {
+        display: inline-block;
+        margin-right: rem-calc(8);
+    }
+
+    &_dark {
+        color: $dark-gray;
+    }
+
+    &_link {
+        margin-right: rem-calc(8);
+    }
+
+    &_err {
+        color: $medium-gray;
+        margin-right: rem-calc(10);
+        font-size: rem-calc(34);
+        display: inline-block;
+        font-weight: 300;
+        margin-bottom: rem-calc(0);
+        line-height: 1;
+    }
+
+    &__date {
+        color: $medium-gray;
+    }
+
+    &__svg {
+        height: rem-calc(70);
+        width: 100%;
+
+        use {
+            fill: $quaternary;
+        }
+    }
+}

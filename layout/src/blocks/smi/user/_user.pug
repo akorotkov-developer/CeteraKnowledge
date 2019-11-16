@@ -1,0 +1,10 @@
+mixin user(title='Юзер Пользовательский')
+  .grid-x.grid-padding-x.user
+    .cell.shrink.show-for-large
+      img(src='./i/image.svg', alt='Аватар').user__img
+    .cell.large-auto
+      if block
+        block
+      else
+        .user__title= title
+        i.user__date 11&nbsp;сентября 2015

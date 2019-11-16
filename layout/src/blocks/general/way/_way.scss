@@ -1,0 +1,9 @@
+.way {
+  font-size: rem-calc(11);
+  @include margin-level(bottom,red);
+  &__pole
+  {
+    margin-left: rem-calc(4);
+    margin-right: rem-calc(4);
+  }
+}

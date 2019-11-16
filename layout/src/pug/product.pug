@@ -1,0 +1,57 @@
+extends shop-index
+
+block page
+  +breadcrumbs(['Главная','Каталог','Газонокосилки бензиновые несамоходные'])
+  .grid-container
+    .grid-x.grid-padding-x
+      .large-16.cell
+        include components/common/_slider
+      .large-auto.cell.field
+        h1.law Газонокосилка бензиновая несамоходная
+        .field__art Артикул:
+          span.field__data 013998
+        .grid-x.grid-padding-x
+          .shrink.cell  
+            +rating()
+          .auto.cell.field__rev <span class="field__digit">8</span> отзывов
+        .grid-x.grid-padding-x
+          .shrink.cell.field__price 25 245 ₽
+          .auto.cell.field__old 35 245 ₽
+        h6 Коротко о товаре  
+        include components/common/_cont
+        .grid-x.grid-padding-x
+          .shrink.cell    
+            a(href="#").button.button_cart В корзину
+          .shrink.cell
+            .field__available В наличии: 15 шт   
+          .cell
+            a(href="#").field__delivery Бесплатная доставка
+            hr
+        .grid-x.grid-padding-x.xlarge-up-2.medium-up-2.large-up-1
+          .cell
+            a(href="#").boot
+              .boot__svg: include ../images/pdf.svg
+              .boot__info
+                .boot__title Сертификат соответствия
+                .boot__size 2.5 Mb
+          .cell
+            a(href="#").boot
+              .boot__svg: include ../images/cog.svg
+              .boot__info
+                .boot__title Предпродажная подготовка
+              
+  include components/common/_desc
+  .fog.fog_mini
+    .grid-container
+      h2 Сопутствующие товары
+      .grid-x.grid-padding-x.large-up-4.medium-up-2
+        for i in [1,2,3,4]
+          .cell
+            +prod
+          .cell
+            +prod(true)
+
+  .grid-container
+    h2 Недавно просмотренные товары
+  include components/common/_prods
+  include components/common/_tractor

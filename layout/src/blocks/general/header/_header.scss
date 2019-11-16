@@ -1,0 +1,212 @@
+.header {
+    background: $primary-color;
+    padding-top: rem-calc(5);
+    padding-bottom: rem-calc(6);
+    position: relative;
+
+    &__logo {
+        width: rem-calc(241);
+    }
+
+    &__hr {
+        border-bottom: rem-calc(1) solid rgba(0, 0, 0, 0.1);
+        margin-bottom: rem-calc(20);
+    }
+
+    &__dist {
+        font-size: rem-calc(11);
+        line-height: 1;
+        margin-bottom: rem-calc(9);
+    }
+
+    &__span {
+        margin-left: rem-calc(6);
+        position: relative;
+        top: rem-calc(2);
+    }
+
+    &__action {
+        display: inline-block;
+        margin-top: rem-calc(10);
+        font-size: rem-calc(15);
+        margin-right: rem-calc(31);
+        margin-left: rem-calc(15);
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    &__back {
+        display: inline-block;
+        border-bottom: rem-calc(1) dotted rgba(0, 0, 0, 0.2);
+        font-size: rem-calc(12);
+    }
+
+    &__call {
+        position: relative;
+        font-weight: 700;
+        top: rem-calc(0);
+        left: rem-calc(2);
+        font-size: rem-calc(20);
+        text-align: right;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.3;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            width: rem-calc(10);
+            height: rem-calc(10);
+            left: rem-calc(-18);
+            top: rem-calc(9);
+            background: $success-color;
+        }
+    }
+
+    &__shortcut {
+        margin-left: rem-calc(30);
+        display: inline-block;
+    }
+
+    &__cab {
+        display: inline-block;
+        position: relative;
+        top: rem-calc(-2);
+    }
+
+    &__home {
+        display: inline-block;
+        margin-bottom: rem-calc(17);
+    }
+
+    &__toggle {
+        margin-bottom: rem-calc(15);
+        cursor: pointer;
+
+        path {
+            transition: 0.3s;
+            // transform: rotate(0deg) translate(rem-calc(0) ,rem-calc(0));
+        }
+
+        svg {
+            margin-right: rem-calc(8);
+            margin-left: rem-calc(2);
+            position: relative;
+            top: rem-calc(1);
+        }
+
+        &.js-open {
+            svg {
+                width: rem-calc(15);
+                height: rem-calc(15);
+                transform: scale(1.2);
+                margin-left: rem-calc(5);
+            }
+
+            path:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+
+    &__catalog {
+        text-transform: uppercase;
+        font-size: rem-calc(18);
+        font-weight: 800;
+    }
+    @include breakpoint(xlarge down) {
+        &__catalog {
+            font-size: rem-calc(16);
+        }
+
+        &__action {
+            margin-right: rem-calc(0);
+        }
+    }
+    @include breakpoint(medium down) {
+        &__home {
+            order: 2;
+        }
+
+        &__logo {
+            width: rem-calc(123);
+            height: rem-calc(18);
+        }
+
+        &__toggle {
+            order: 1;
+            margin-bottom: rem-calc(0);
+
+            svg {
+                top: rem-calc(4);
+            }
+        }
+
+        &__table {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        &__catalog,
+        &__dist {
+            display: none;
+        }
+    }
+    @include breakpoint(small only) {
+        padding-top: rem-calc(16);
+        padding-bottom: rem-calc(16);
+box-shadow: rem-calc(0 4 20) rgba(0, 0, 0, 0.1);
+        .input-group-button {
+            display: none;
+        }
+
+        .input-group {
+            margin-bottom: rem-calc(0);
+            margin-top: rem-calc(10);
+        }
+
+        &__home {
+            margin-bottom: rem-calc(0);
+        }
+
+        &__port {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        &__toggle {
+            svg {
+                margin-right: rem-calc(10);
+                margin-left: rem-calc(0);
+                top: rem-calc(4);
+            }
+
+            &.js-open {
+                svg {
+                    margin-right: rem-calc(14);
+                    margin-left: rem-calc(11);
+                }
+            }
+        }
+
+        &__hr {
+            margin-bottom: rem-calc(10);
+        }
+
+        &__shortcut {
+            margin-bottom: rem-calc(10);
+        }
+
+        &__cab {
+            margin-bottom: rem-calc(10);
+        }
+
+        &__cart {
+            cursor: pointer;
+            margin-left: rem-calc(17);
+            margin-right: rem-calc(8);
+            display: inline-block;
+        }
+    }
+}

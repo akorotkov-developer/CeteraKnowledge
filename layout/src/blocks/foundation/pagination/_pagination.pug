@@ -1,0 +1,24 @@
+mixin pagination()
+  ul.pagination
+    if block
+      block
+    else
+      li.pagination-previous
+        a(href='#' title='' aria-label='Предыдущая страница')
+          include ../../../images/prev.svg
+      li
+        a(href='#' title='' aria-label='Страница 1') 1
+      li
+        a(href='#' title='' aria-label='Страница 2') 2
+      li.current 3
+
+      li.ellipsis
+      li
+        a(href='#' title='' aria-label='Страница 26') 26
+      li
+        a(href='#' title='' aria-label='Страница 27') 27
+      li
+        a(href='#' title='' aria-label='Страница 28') 28
+      li.pagination-next
+        a(href='#' title='' aria-label='Следующая страница')
+          include ../../../images/next.svg

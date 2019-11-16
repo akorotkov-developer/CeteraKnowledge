@@ -1,0 +1,52 @@
+.mag {
+    position: relative;
+    padding-top: rem-calc(9);
+    margin-bottom: rem-calc(8);
+
+    &__input {
+        border: rem-calc(0);
+        border-bottom: rem-calc(1) solid #000000;
+        font-size: rem-calc(14);
+        padding-left: rem-calc(5);
+        padding-right: rem-calc(30);
+        border-radius: rem-calc(0);
+        height: rem-calc(50);
+        color: #929A9C;
+
+        &::-webkit-input-placeholder {
+            color: #929A9C;
+        }
+
+        &::-moz-placeholder {
+            color: #929A9C;
+        }
+
+        &:-moz-placeholder {
+            color: #929A9C;
+        }
+
+        &:-ms-input-placeholder {
+            color: #929A9C;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            border: rem-calc(0);
+            border-bottom: rem-calc(1) solid #333;
+        }
+    }
+
+    &__submit {
+        cursor: pointer;
+
+        position: absolute;
+        outline: none;
+        right: rem-calc(5);
+        top: rem-calc(25);
+        svg {
+          width: rem-calc(17);
+          height: rem-calc(17);
+        }
+    }
+}

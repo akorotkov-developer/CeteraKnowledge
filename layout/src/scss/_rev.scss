@@ -1,0 +1,106 @@
+.rev {
+    margin-bottom: rem-calc(45);
+    padding-right: rem-calc(36);
+
+    &_inner {
+        padding-left: rem-calc(36);
+        margin-right: rem-calc(-36);
+        margin-bottom: rem-calc(30);
+        padding-right: rem-calc(0);
+        border-left: rem-calc(3) solid #E9F0F2;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: rem-calc(18);
+        color: #000;
+        display: inline-block;
+    }
+
+    &__comment {
+        color: #929A9C;
+        display: inline-block;
+        margin-bottom: rem-calc(32);
+        font-size: rem-calc(14);
+        font-weight: 400;
+        margin-left: rem-calc(20);
+
+        svg {
+            position: relative;
+            top: rem-calc(2);
+        }
+    }
+
+    &__num {
+        display: inline-block;
+        margin-left: rem-calc(2);
+    }
+
+    &__date {
+        position: relative;
+        display: inline-block;
+        padding-left: rem-calc(32);
+        color: #666E6F;
+        font-size: rem-calc(14);
+        font-weight: 400;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: rem-calc(12);
+            top: rem-calc(8);
+            background: #A9B3B7;
+            width: rem-calc(5);
+            height: rem-calc(5);
+            border-radius: 100%;
+        }
+    }
+
+    &__like {
+        color: #27AE60;
+        font-size: rem-calc(14);
+        margin-right: rem-calc(19);
+        margin-left: rem-calc(19);
+        display: inline-block;
+
+        svg {
+            display: inline-block;
+        }
+    }
+
+    &__dislike {
+        font-size: rem-calc(14);
+        margin-right: rem-calc(19);
+        color: #EC2227;
+        display: inline-block;
+
+        svg {
+            position: relative;
+            top: rem-calc(5);
+            transform: scale(1,-1);
+            display: inline-block;
+        }
+    }
+
+    &__text {
+        margin-bottom: rem-calc(12);
+    }
+
+    &__digit {
+        margin-left: rem-calc(2);
+        display: inline-block;
+    }
+
+    &__reply {
+        color: #0070C9;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    &__profit {
+        color: #929A9C;
+        font-size: rem-calc(14);
+        font-weight: 400;
+    }
+}

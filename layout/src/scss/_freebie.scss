@@ -1,0 +1,92 @@
+.freebie {
+    background: $black;
+    padding-bottom: rem-calc(26);
+    color: $white;
+    padding-top: rem-calc(35);
+
+    &__title {
+        margin-bottom: rem-calc(0);
+    }
+
+    &__input {
+        padding-left: rem-calc(18);
+        padding-right: rem-calc(18);
+        height: rem-calc(50);
+        color: #929A9C;
+        font-size: rem-calc(16);
+        margin-bottom: rem-calc(12);
+        font-weight: 400;
+
+        &::-webkit-input-placeholder {
+            color: #929A9C;
+            font-weight: 400;
+        }
+
+        &::-moz-placeholder {
+            color: #929A9C;
+            font-weight: 400;
+        }
+
+        &:-moz-placeholder {
+            color: #929A9C;
+            font-weight: 400;
+        }
+
+        &:-ms-input-placeholder {
+            color: #929A9C;
+            font-weight: 400;
+        }
+    }
+
+    &__link {
+        font-size: rem-calc(14);
+        color: rgba(255,255,255,.7);
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: rgba(255,255,255,.9);
+        }
+    }
+
+    &__subscribe {
+        font-size: rem-calc(18);
+        font-weight: 500;
+        color: $white;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: rgba(255,255,255,.9);
+        }
+    }
+    @include breakpoint(small only) {
+        padding-top: rem-calc(34);
+
+        &__title {
+            font-size: rem-calc(24);
+            margin-bottom: rem-calc(12);
+            font-weight: 800;
+            text-align: center;
+        }
+
+        &__link {
+          display: block;
+          text-align: center;
+          font-size: rem-calc(13);
+            color: rgba($white,.7);
+        }
+
+        &__input {
+            font-size: rem-calc(14);
+            text-align: center;
+        }
+
+        &__subscribe {
+            font-size: rem-calc(14);
+            margin-bottom: rem-calc(20);
+            text-align: center;
+            display: block;
+        }
+    }
+}

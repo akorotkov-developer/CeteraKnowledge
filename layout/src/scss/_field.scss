@@ -1,0 +1,52 @@
+.field {
+    &__art {
+        color: #666E6F;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        margin-bottom: rem-calc(24);
+    }
+
+    &__delivery {
+        color: #27AE60;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        display: inline-block;
+        margin-bottom: rem-calc(24);
+    }
+
+    &__available {
+        color: #929A9C;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        margin-left: rem-calc(15);
+        margin-bottom: rem-calc(24);
+        padding-top: rem-calc(12);
+    }
+
+    &__data {
+        color: #000;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        margin-left: rem-calc(6);
+    }
+
+    &__price {
+        margin-bottom: rem-calc(29);
+        font-size: rem-calc(28);
+        font-weight: 600;
+        color: #000;
+    }
+
+    &__old {
+        color: #929A9C;
+        font-size: rem-calc(18);
+        font-weight: 400;
+        text-decoration: line-through;
+        padding-top: rem-calc(11);
+    }
+
+    &__rev {
+        color: #929A9C;
+        font-size: rem-calc(13);
+    }
+}

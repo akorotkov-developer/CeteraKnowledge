@@ -1,0 +1,51 @@
+footer.footer
+  .grid-container: .grid-x.grid-padding-x
+    .large-6.cell.footer__block
+      a(href='#')
+        img(src='./images/logo_white.svg',  alt='logo').footer__logo
+
+    .medium-12.large-8.cell
+      h6 Рубрики
+      nav.footer__nav.grid-x.grid-padding-x
+        .small-12.cell
+          a.footer__link(href='#') Экономика
+          a.footer__link(href='#') Финансы
+          a.footer__link(href='#') ТЭК
+          a.footer__link(href='#') Интернет
+          a.footer__link(href='#') Промышленность
+          a.footer__link(href='#') Транспорт
+          a.footer__link(href='#') Наука
+          a.footer__link(href='#') ИТ и Медиа
+          a.footer__link(href='#') Потребительские рынки
+        .small-12.cell
+          a.footer__link(href='#') ВПК
+          a.footer__link(href='#') Бренды
+          a.footer__link(href='#') Спорт
+          a.footer__link(href='#') Видео
+          a.footer__link(href='#') Интервью
+          a.footer__link(href='#') Пресс-релизы
+          a.footer__link(href='#') Отставки и назначения
+          a.footer__link(href='#') Мнения
+
+    .small-12.medium-6.large-4.cell
+      a(href='#', title='').footer__head Редакция
+      nav.footer__nav
+        a.footer__link(href='#') Реклама
+        a.footer__link(href='#') Медиакит
+        a.footer__link(href='#') Техподдержка
+        a.footer__link(href='#') Спецпроекты
+
+    .small-12.medium-6.large-6.cell
+      h6 Учредитель
+      .sect ООО «Цетера Лабс»
+      h6 Контакты
+      div 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
+      div: a.footer__link(href='tel:88007755293') 8 (800) 775-52-93
+      .sect
+        a.footer__link(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+
+  .grid-container: .grid-x.grid-padding-x: .cell.footer__soc
+    include ../common/_soc
+
+  include ../common/_footer-info
+  .grid-container: .grid-x.grid-padding-x: .cell.text-center Св-во о регистрации СМИ №00000 выдано 01 января 2019 г. Государственным комитетом Российской Федерации по печати

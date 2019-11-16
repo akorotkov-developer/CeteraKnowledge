@@ -1,0 +1,16 @@
+.carousel-services {
+  background: $main-color;
+  padding-top: rem-calc(42);
+
+  &__text {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__item {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+  }
+}

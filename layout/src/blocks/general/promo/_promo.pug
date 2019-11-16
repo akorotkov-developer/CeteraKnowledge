@@ -1,0 +1,15 @@
+mixin promo(title='Абонентское обслуживание',buttonText='Узнайте стоимость сайта')
+  .promo
+    .grid-container
+      .grid-x.grid-padding-x
+        .cell.medium-14.align-self-middle
+          h2= title
+          p
+            | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
+            br
+            | Часто — нулевая стоимость сайта до открытия.
+          p
+            +button(buttonText + '<i class="fas fa-long-arrow-alt-right canv"></i>','button_secondary')
+          
+        .cell.medium-8.medium-offset-2.show-for-medium
+          img(src='./i/photo.svg' alt="").promo__img

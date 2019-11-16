@@ -1,0 +1,63 @@
+.side.hide-for-small-only
+    include _partners
+    hr.hr.hr_new
+.params
+  .params__title
+    .params__filter
+      include ../../../images/funnel.svg
+    .params__name Параметры
+    .params__arr
+      include ../../../images/chevron-down-2.svg
+.hide-for-small-only#filter-left(data-toggler='.hide-for-small-only')
+    +accordion
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Мощность, л/с
+            .accordion-content(data-tab-content)
+                +slider(2,10)
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Цена, руб.
+            .accordion-content(data-tab-content)
+                +slider(5820,46457)
+
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Трансмиссия
+            .accordion-content(data-tab-content)
+                .accordion__info
+                    +step('Все',false,true)
+                    +step('гидростатическая')
+                    +step('6-скоростная')
+
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Корпус
+            .accordion-content(data-tab-content)
+              .accordion__info
+                +step('Все',false,true)
+                +step('нержавеющая сталь')
+                +step('окрашенная сталь')
+                +step('решетчатый')
+                +step('сплошной')
+                +step('покрытие Termosafe')
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Двигатель
+            .accordion-content(data-tab-content)
+              .accordion__info
+                +step('Все',false,true)
+                +step('1 цилиндр')
+                +step('2 цилиндра')
+                +step('CC OHV')
+                +step('СС')
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Высота кошения, мм
+            .accordion-content(data-tab-content)
+              .accordion__info
+                +step('Все',false,true)
+                +step('40-60')
+                +step('60-80')
+        li.accordion-item.is-active(data-accordion-item)
+            a.accordion-title(href='#') Ширина кошения, мм
+            .accordion-content(data-tab-content)
+              .accordion__info
+                +step('Все',false,true)
+                +step('40-60')
+                +step('60-80')
+                +step('80-100')

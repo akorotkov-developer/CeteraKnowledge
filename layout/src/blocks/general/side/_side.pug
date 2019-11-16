@@ -1,0 +1,19 @@
+mixin side()
+  .side
+    .show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium')
+      +button
+        .button.button_expanded(data-toggle)
+          i.fas.fa-lg.fa-bars.picture
+          | Навигация
+    .side__block#menu-left
+      if block
+        block
+      else
+        .side__date 1-3 января 2019
+        .side__place
+          i.fas.fa-map-marker-alt
+          span.side__city Ярославль,
+          | пр-кт Ленина, д. 1, офис 123
+        +button('<i class="far fa-envelope picture"></i>Записаться','button_secondary button_expanded','mailto:support@cetera.ru')  
+          
+        

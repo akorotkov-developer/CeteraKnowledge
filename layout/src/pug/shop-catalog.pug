@@ -1,0 +1,57 @@
+extends shop-index
+
+block page
+    .hide-for-small-only: +breadcrumbs(['Главная','Каталог'])
+    .grid-container.sieve: .grid-x.grid-padding-x
+        .medium-9.large-6.text-center.medium-text-left.cell
+            h1.law Каталог
+        .cell.medium-15.large-18.hide-for-small-only
+            .sort.sort_mini
+                .sort__span Сортировать по:
+                .sort__drop возрастанию цены
+                .sort__svg: include ../images/arr-mini.svg
+                .sort__block
+                  div: a(href="#") возрастанию цены
+                  div: a(href="#") убыванию цены
+                  div: a(href="#") рейтингу
+            a(href="#").sort: .sort__main Хиты продаж    
+            a(href="#").sort: .sort__main Новинки
+            a(href="#").sort: .sort__main Акции
+            
+    .fit
+      .fit__title
+        .fit__name Категории товаров
+        .fit__arr
+          include ../images/chevron-down-3.svg
+      .hide.fit__menu: include components/shop/_partners
+    .fog.fog_top: .grid-container: .grid-x.grid-padding-x
+        sidebar.cell.medium-9.large-6: .fog__sidebar
+            include components/shop/_sidebar
+        .cell.medium-15.large-18
+            block products
+                .sect.grid-x.grid-padding-x.large-up-3(data-equalizer data-equalize-by-row="true")
+                    .cell: +prod(false,'Комби-перфоратор Metabo KHE 2650' ,true)
+                    .cell: +prod(true,'Дрель-шуруповёрт RYOBI R18DDP-LL13G' ,true)
+                    .cell: +prod(true,'Лобзик Metabo STEB 65 Quick' ,true)
+                    .cell: +prod(true,'Торцовочная пила Ryobi EMS254L',true)
+                    .cell
+                      .flag
+                        .flag__title горячие скидки
+                        .flag__info на электрические триммеры только в августе
+                        .flag__discount –30%
+                    .cell: +prod(true,'Дрель-шуруповёрт RYOBI R18DDP-LL13G' ,true)
+                    .cell: +prod(true,'Лобзик Metabo STEB 65 Quick' ,true)
+                    .cell: +prod(true,'Комби-перфоратор Metabo KHE 2650' ,true)
+                    .cell: +prod(true,'Дрель-шуруповёрт RYOBI R18DDP-LL13G' ,true)
+                    .cell: +prod(true,'Лобзик Metabo STEB 65 Quick' ,true)
+                    .cell: +prod(true,'Торцовочная пила Ryobi EMS254L',true)
+                    .cell: +prod(true,'Дрель-шуруповёрт RYOBI R18DDP-LL13G' ,true)
+                  
+                
+    .info: .grid-container: .grid-x.grid-padding-x
+      .large-offset-6.large-18.cell
+        .grid-x.grid-padding-x.text-center.medium-text-left
+          .medium-shrink.cell.info__block
+            a(href="#").button.button_hollow Показать еще <span>12</span> товаров
+          .medium-shrink.cell  
+            +pagination

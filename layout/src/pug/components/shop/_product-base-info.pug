@@ -1,0 +1,42 @@
+include ../../../blocks/shop/checkbox-group/_checkbox-group
+.sect  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
+
+.grid-x.grid-padding-x.sect
+  .large-4.cell Цвет:
+  .cell.auto
+    +checkbox-group('clr',['#eee','#ca3034','#578b93','#deb887'])
+
+.grid-x.grid-padding-x.sect
+  .large-4.cell Размер:
+  .cell.auto
+    +checkbox-group('size',false,['39','40','41','42','43','44',])
+    .sect
+      a(href='#', title='') Таблица размеров
+.grid-x.grid-padding-x.sect
+  .cell.shrink
+    span.shipment__price
+      | 25 280&nbsp;
+      i.fas.fa-ruble-sign
+  .cell.shrink
+    .shipment__old
+      | 27 150 &nbsp;
+      i.fas.fa-ruble-sign
+    div:  +label('Бонус <i>+45</i>','label_warning')
+.grid-x.grid-padding-x.align-middle
+  .large-auto.cell
+    form(action='shop-cart.html' method='get').search
+      +quant
+      .search__cont
+        +button('<i class="fas fa-shopping-basket picture"></i>В корзину','button_input')
+          
+  .large-shrink.cell.sect
+    a(href='shop-compare.html' title="Товар добавлен к сравнению.").shipment__compare
+      i.fas.fa-lg.fa-balance-scale.picture
+      span.shipment__text К сравнению
+    a(data-open="add-to-favourites-auth-popup").shipment__compare
+      i.far.fa-heart.fa-lg.picture
+      span.shipment__text Запомнить
+
+.grid-x.grid-padding-x: .cell.sect.sect_rect
+  +rating
+  span.shipment__mark оценок 25

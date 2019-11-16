@@ -1,0 +1,36 @@
+.project {
+  @include margin-level(bottom,orange);
+
+  &__img {
+    @include margin-level(bottom,red);
+  }
+
+  &__title {
+    @include margin-level(bottom,blue);
+    font-size: rem-calc(18);
+  }
+
+  &__views {
+    color: $dark-gray;
+    margin-left: rem-calc(8);
+    margin-right: rem-calc(16);
+  }
+
+  &__icon {
+    color: $dark-gray;
+  }
+
+  &__info {
+    padding-bottom: rem-calc(20);
+  }
+
+  &__text {
+    @include margin-level(bottom,blue);
+  }
+
+  &__cat {
+    display: block;
+    color: $dark-gray;
+    @include margin-level(bottom,blue);
+  }
+}

@@ -1,0 +1,12 @@
+mixin rating(isChosen)
+  -var nameRandom =  Math.ceil(Math.random() * 1000);
+  .rating(class=isChosen?"rating_disabled":"")
+    -var id =  Math.ceil(Math.random() * 10000);
+    input.rating__input(id="rating" + id type="radio" checked=isChosen name="rating" + nameRandom)
+    label.rating__star(for="rating" + id)
+    each title in [2,3,4,5]
+      -var id =  Math.ceil(Math.random() * 10000);
+      input.rating__input(id="rating" + id type="radio" name="rating" + nameRandom)
+      label.rating__star(for="rating" + id)
+          
+    

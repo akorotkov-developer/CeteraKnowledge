@@ -1,0 +1,10 @@
+dbhost=db
+dbuser=cetera
+dbname=cetera
+dbpass=cetera
+debug_level=1
+setup_done=1
+
+[memcache_server]
+host=memcached
+port=11211

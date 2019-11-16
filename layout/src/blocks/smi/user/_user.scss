@@ -1,0 +1,17 @@
+.user {
+@include margin-level(bottom,red);
+
+  &__img {
+    background: #bbb;
+    width: rem-calc(45);
+  }
+
+  &__title {
+    color: $quaternary;
+    font-weight: $global-weight-bold;
+  }
+
+  &__date {
+    color: $dark-gray;
+  }
+}

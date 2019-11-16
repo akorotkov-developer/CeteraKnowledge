@@ -1,0 +1,127 @@
+.tabs {
+    background: $black;
+    border: rem-calc(0);
+    padding-left: rem-calc(8);
+    padding-right: rem-calc(8);
+
+    &-content {
+        border: rem-calc(0);
+        padding: rem-calc(0);
+        &_null {
+          background: none;
+        }
+    }
+
+    &-panel {
+        padding: rem-calc(27) rem-calc(0) rem-calc(64);
+        &_null {
+        padding: rem-calc(0);
+        }
+    }
+
+    &__import {
+        margin-bottom: rem-calc(60);
+        font-size: rem-calc(16);
+        font-weight: 400;
+
+        svg {
+            margin-right: rem-calc(10);
+            position: relative;
+            top: rem-calc(2);
+        }
+    }
+
+    &__h6 {
+        margin-bottom: rem-calc(16);
+        font-size: rem-calc(18);
+        font-weight: 600;
+    }
+
+    &__span {
+        margin-right: rem-calc(14);
+    }
+
+    &__pay {
+        font-size: rem-calc(16);
+        color: #666E6F;
+        font-weight: 400;
+        margin-bottom: rem-calc(40);
+    }
+
+    &__info {
+        margin-bottom: rem-calc(40);
+    }
+
+    &__thank {
+        margin-bottom: rem-calc(60);
+        font-size: rem-calc(24);
+        font-weight: 400;
+        color: #000;
+        line-height: 1.32;
+    }
+
+    &-title {
+        position: relative;
+
+        & > a {
+            position: relative;
+            padding: rem-calc(29 16);
+            outline: none;
+            color: $white;
+            font-size: rem-calc(18);
+            font-weight: 400;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $white;
+                background: rgba(255, 255, 255, 0.34);
+            }
+        }
+
+        &.is-active {
+            & > a {
+                color: $white;
+                font-weight: 700;
+                background: rgba(255, 255, 255, 0.34);
+            }
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        font-size: rem-calc(12);
+        font-weight: 300;
+        right: rem-calc(2);
+        top: rem-calc(20);
+        color: $white;
+    }
+    @include breakpoint(large down) {
+        &-title {
+            & > a {
+                font-size: rem-calc(15);
+                padding-top: rem-calc(20);
+                padding-bottom: rem-calc(20);
+            }
+        }
+    }
+    @include breakpoint(medium down) {
+        &__counter {
+            display: none;
+        }
+
+        &__pay,
+        &__thank {
+            text-align: center;
+        }
+    }
+    @include breakpoint(small only) {
+        &__thank {
+            font-size: rem-calc(20);
+        }
+
+        &__import {
+            font-size: rem-calc(12);
+        }
+    }
+}

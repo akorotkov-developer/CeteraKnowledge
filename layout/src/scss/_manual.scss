@@ -1,0 +1,45 @@
+.manual {
+    display: block;
+    background: #E9F0F2;
+    padding-top: rem-calc(17);
+    padding-left: rem-calc(19);
+    padding-bottom: rem-calc(17);
+    margin-bottom: rem-calc(16);
+    font-size: rem-calc(14);
+    font-weight: 400;
+    color: #929A9C;
+    padding-right: rem-calc(19);
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $black;
+    }
+
+    &__title {
+        color: #000;
+        font-size: rem-calc(14);
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: rem-calc(5);
+        overflow: hidden;
+        height: rem-calc(57);
+        position: relative;
+
+        &_bold {
+            line-height: 1.4;
+            margin-bottom: rem-calc(15);
+            height: rem-calc(48);
+            font-size: rem-calc(17);
+        }
+    }
+
+    &__download {
+        color: #000;
+
+        svg {
+            display: inline-block;
+            margin-right: rem-calc(5);
+        }
+    }
+}

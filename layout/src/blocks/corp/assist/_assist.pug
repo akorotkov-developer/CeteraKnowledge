@@ -1,0 +1,29 @@
+mixin assist()
+  form(method='post', data-abide='', novalidate='novalidate' ).assist
+    if block
+      block
+    else
+      .grid-x.grid-padding-x
+        .medium-8.cell
+          label Ваше имя
+        .medium-16.cell
+          input(type='text', placeholder='Ваше имя', required='')
+          p.help-text Поле обязательно для заполнения
+      .grid-x.grid-padding-x
+        .medium-8.cell
+          label Email
+        .medium-16.cell
+          input(type='email', placeholder='username@address.com', required='')
+          p.help-text Введите ваш электронный адрес
+      .grid-x.grid-padding-x
+        .medium-8.cell
+          label Чем мы можем помочь?
+        .medium-16.cell
+          textarea(placeholder='Введите ваше сообщение')
+      .grid-x.grid-padding-x.assist__block
+        .medium-16.medium-offset-8.cell
+          +step('Соглашаюсь на <a href="" title="условия">обработку персональных данных</a>')
+
+      .grid-x.grid-padding-x
+        .medium-16.medium-offset-8.cell
+          +button('Отправить сообщение<i class="far fa-envelope fa-lg canv"></i>','button_secondary')

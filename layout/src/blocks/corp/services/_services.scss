@@ -1,0 +1,19 @@
+.services {
+  padding: rem-calc(42 21 21);
+  text-align: center;
+  background: $main-color;
+  border-radius: $global-radius;
+  @include margin-level(bottom,yellow);
+
+  &__title {
+    margin-bottom: rem-calc(10);
+  }
+
+  &__img {
+    max-width: rem-calc(98);
+  }
+
+  &__block {
+    margin-bottom: rem-calc(21);
+  }
+}

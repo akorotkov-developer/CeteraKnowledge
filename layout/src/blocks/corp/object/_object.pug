@@ -1,0 +1,11 @@
+mixin object(array)
+  if array
+    each title,index in array
+      .object.grid-x.grid-padding-x
+        .cell.shrink
+          a(href="#"): img(src="./i/photo.svg").object__img
+        .cell.auto
+          a(href="#")= title
+  else
+    .object: a(href="#") Разработаем несколько интернет-магазинов по продаже сантехники      
+  hr

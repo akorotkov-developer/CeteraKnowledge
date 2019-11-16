@@ -1,0 +1,7 @@
+mixin callout(classes,eq)
+  if eq
+    .callout(class=classes data-closable='' data-equalizer-watch)
+      block
+  else
+    .callout(class=classes data-closable='')
+      block

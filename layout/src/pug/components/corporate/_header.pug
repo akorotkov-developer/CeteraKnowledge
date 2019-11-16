@@ -1,0 +1,11 @@
+header.header
+  .grid-container: .grid-x.grid-padding-x
+    .cell.auto.header__info
+      a(href='#' title='')
+        img(src='./images/logo.svg',  alt='logo').header__logo
+    .small-4.cell.header__hamb
+      div(data-responsive-toggle='menu', data-hide-for='medium')
+        div(data-toggle)
+          i.fas.fa-bars
+    .large-18.large-offset-2.cell.align-self-middle#menu
+      +cat()

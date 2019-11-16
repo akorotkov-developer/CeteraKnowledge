@@ -1,0 +1,23 @@
+include ../../shop/menu-top/_menu-top
+mixin contacts()
+  .contacts
+    if block
+      block
+    else
+      .grid-container: .grid-x.grid-padding-x
+        .large-9.cell.medium-order-2
+          +cities
+          span.contacts__info
+            span.contacts__menu(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+              span(data-toggle): i.fas.fa-bars.fa-lg
+            a(href='tel:+71234567890').contacts__link
+              i.fas.fa-phone.contacts__icon
+              | +7 123 456-78-90
+            a(href='mailto:support@cetera.ru').contacts__link
+              i.far.fa-envelope.contacts__icon
+              | support@cetera.ru
+            a(href='#' title='' data-toggle='search').contacts__search: i.fas.fa-lg.fa-search
+        .large-15.cell.medium-order-1
+          .contacts__cab#responsive-menu
+            +menu-top(['Контакты', 'Узнайте цены', 'Личный кабинет'])
+        

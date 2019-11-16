@@ -1,0 +1,77 @@
+header.header
+    .grid-container
+        .grid-x.grid-padding-x
+            .cell.large-6.header__table.small-14.medium-24
+                .header__dist Официальный дистрибьютор в России
+                a(href="#").header__home
+                    img(src="./images/logo.svg", alt="").header__logo
+                .header__toggle
+                    include ../../../images/menu.svg
+                    span.header__catalog Каталог товаров 
+            .cell.show-for-small-only.small-10.text-right
+                .header__port(data-toggle="search"): include ../../../images/ss.svg        
+                .header__cart: include ../../../images/basket2.svg        
+            form.cell.show-for-small-only.hide(data-toggler=".hide")#search  
+                include _search
+            .cell.large-18.hide-for-small-only#card
+                .grid-x.grid-padding-x
+                    nav.large-16.cell.medium-17
+                        ul.summit
+                            li.summit__item: a(href="#").summit__link Доставка
+                            li.summit__item: a(href="#").summit__link Оплата
+                            li.summit__item: a(href="#").summit__link Сервис-центр
+                            li.summit__item: a(href="#").summit__link Гарантия
+                    .large-8.medium-text-right.cell.medium-7.text-center
+                        a(href="#").header__cab
+                            img(src="./images/cab.svg", alt="")
+                            span.header__span Личный кабинет
+                    .cell
+                        .header__hr    
+                    form.cell.xlarge-10.large-7.medium-5.hide-for-small-only
+                        include _search
+                    .cell.xlarge-8.large-10.medium-11.text-center.medium-text-left
+                        a(href="#").header__action Акции
+                        a(href="#").header__shortcut
+                            img(src="./images/heart.svg", alt="")
+                        a(href="#").header__shortcut
+                            img(src="./images/bar.svg", alt="")
+                        a(href="#").header__shortcut
+                            img(src="./images/basket2.svg", alt="")
+                    .cell.xlarge-6.medium-text-right.large-7.medium-8.text-center
+                        a(href="#").header__call +7 495 123-45-67
+                        a(href="#").header__back Заказать обратный звонок
+
+    .tractor: .grid-container: .grid-x.grid-padding-x 
+        nav.large-6.cell.tractor__nav.medium-10
+            .tractor__item.is-active(data-tab='panel1')
+                .grid-x.grid-padding-x
+                    .shrink.cell
+                        img(src="./i/tr1.png", alt="").tractor__icon
+                    .auto.cell.tractor__info
+                        .tractor__title Газонокосилки
+            .tractor__item(data-tab='panel2')
+                .grid-x.grid-padding-x
+                    .shrink.cell
+                        img(src="./i/tr1.png", alt="").tractor__icon
+                    .auto.cell.tractor__info
+                        .tractor__title Садовые тракторы
+            .tractor__item(data-tab='panel3')
+                .grid-x.grid-padding-x
+                    .shrink.cell
+                        img(src="./i/tr1.png", alt="").tractor__icon
+                    .auto.cell.tractor__info
+                        .tractor__title Снегоуборочная техника
+            .tractor__item(data-tab='panel4')
+                .grid-x.grid-padding-x
+                    .shrink.cell
+                        img(src="./i/tr1.png", alt="").tractor__icon
+                    .auto.cell.tractor__info
+                        .tractor__title Наименование раздела
+        .large-18.cell.tractor__content.medium-14
+            .tractor__panel#panel1.is-active
+                include _info
+            .tractor__panel#panel2
+                include _info
+            .tractor__panel#panel3
+            .tractor__panel#panel4
+                include _info

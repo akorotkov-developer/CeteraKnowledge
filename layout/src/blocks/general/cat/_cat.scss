@@ -1,0 +1,141 @@
+.cat {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100;
+  font-weight: $global-weight-bold;
+  &_top {
+    margin-top: rem-calc(5);
+  }
+
+  &__item {
+    padding-right: rem-calc(30);
+    @include disable-mouse-outline;
+    position: relative;
+
+    &:last-child {
+      padding-right: rem-calc(0);
+    }
+
+    & .cat {
+      text-transform: none;
+      font-weight: 400;
+      display: none;
+      position: absolute;
+      margin: rem-calc(-3 0 0) -1rem;
+      padding: 0.5rem 0;
+      top: 100%;
+      left: 0;
+      width: 13rem;
+      background: scale-color($main-color, $lightness: 50%);
+      border-bottom: rem-calc(2) solid $warning-color;
+
+      & .cat {
+        left: 100%;
+        top: 0;
+      }
+    }
+
+    & .cat__item {
+      padding: 0;
+      width: 100%;
+
+      & .cat__link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: $secondary-color;
+
+        &:after {
+          display: none;
+        }
+
+        &:hover {
+          color: $secondary-color;
+          background: scale-color($main-color, $lightness: -5%);
+        }
+      }
+    }
+
+    &:hover > .cat {
+      display: block;
+    }
+
+    &:hover > .cat__link:after {
+      width: 100%;
+    }
+
+    & .cat .cat__item:hover > .cat {
+      display: block;
+    }
+  }
+
+  &__link {
+    @include disable-mouse-outline;
+    display: block;
+    color: $secondary-color;
+    position: relative;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &:after {
+      content: ' ';
+      display: block;
+      border-bottom: rem-calc(2) solid $warning-color;
+      width: 0;
+      position: absolute;
+      left: 0;
+      -webkit-transition: width 0.3s ease;
+      -moz-transition: width 0.3s ease;
+      -ms-transition: width 0.3s ease;
+      -o-transition: width 0.3s ease;
+      transition: width 0.3s ease;
+    }
+  }
+  @include breakpoint(large down) {
+    &_top {
+      margin-top: rem-calc(0);
+    }
+
+    &__item {
+      padding-right: rem-calc(15);
+      padding-top: rem-calc(5);
+      padding-bottom: rem-calc(5);
+
+      & .cat .cat__item:hover > .cat {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint(medium down) {
+    justify-content: center;
+    margin-top: rem-calc(21);
+    &_top {
+      margin-top: rem-calc(0);
+    }
+
+    &__item {
+      &:hover {
+        & > .cat {
+          display: none;
+        }
+
+        & > .cat__link:after {
+          width: 0;
+        }
+      }
+    }
+  }
+  @include breakpoint(small only) {
+    &__item {
+      width: 100%;
+    }
+  }
+}

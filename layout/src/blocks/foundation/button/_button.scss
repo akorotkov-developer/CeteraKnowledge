@@ -1,0 +1,283 @@
+.button {
+    padding: rem-calc(11 15);
+    font-size: rem-calc(14);
+    color: $black;
+    border-radius: rem-calc(20);
+    margin-bottom: rem-calc(24);
+
+    &:active,
+    &:focus,
+    &:hover {
+        background: scale-color($primary-color, $lightness: 25%);
+        color: $black;
+    }
+
+    &.js-open {
+        background: $primary-color;
+    }
+
+    &_cart {
+        border-radius: rem-calc(3);
+        font-weight: 600;
+        font-size: rem-calc(16);
+        padding: rem-calc(16) rem-calc(44);
+        margin-bottom: rem-calc(18);
+    }
+
+    &_label {
+        background: none;
+        border: rem-calc(1) solid #DADADA;
+        border-radius: rem-calc(50);
+        font-size: rem-calc(13);
+        color: #666E6F;
+        padding: rem-calc(7) rem-calc(13);
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: #666E6F;
+            background: #DADADA;
+        }
+    }
+
+    &__num {
+        margin-left: rem-calc(5);
+        font-weight: 400;
+    }
+
+    &_req {
+        color: $white;
+        font-weight: 600;
+        background: #000;
+        font-size: rem-calc(18);
+        border-radius: rem-calc(4);
+        font-size: rem-calc(18);
+        padding: rem-calc(15 35);
+    }
+
+    &_submit {
+        margin-bottom: rem-calc(12);
+        font-size: rem-calc(18);
+        padding-left: rem-calc(40);
+        padding-right: rem-calc(40);
+        background: $white;
+        font-weight: 700;
+        border-radius: rem-calc(4);
+        height: rem-calc(50);
+    }
+
+    &_call {
+        margin-bottom: rem-calc(12);
+        font-size: rem-calc(18);
+        padding-left: rem-calc(38);
+        padding-right: rem-calc(38);
+        border-radius: rem-calc(50);
+        text-align: center;
+        font-weight: 600;
+        border-radius: rem-calc(50);
+        padding-top: rem-calc(15);
+        padding-bottom: rem-calc(15);
+    }
+
+    &_left {
+        margin-left: rem-calc(10);
+    }
+
+    &_right {
+        margin-right: rem-calc(10);
+    }
+
+    &_white {
+        background: $white;
+        color: $black;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: $primary-color;
+            color: $black;
+        }
+    }
+
+    &_black {
+        background: $black;
+        color: $white;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: $primary-color;
+        }
+    }
+
+    &_prod {
+        margin-bottom: rem-calc(0);
+        background: none;
+        border: rem-calc(1) solid $primary-color;
+        color: $primary-color;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: $primary-color;
+            border-color: $primary-color;
+            color: $white;
+        }
+    }
+
+    &_big {
+        font-size: rem-calc(17);
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: rem-calc(20 59 21);
+        color: $black;
+        border-radius: rem-calc(30);
+        background: $white;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: $light-gray;
+            color: $black;
+        }
+    }
+
+    &_large {
+        font-size: rem-calc(24);
+    }
+
+    &_expanded {
+        display: block;
+        width: 100%;
+        padding-left: rem-calc(8);
+        padding-right: rem-calc(8);
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    &_light-gray {
+        background: $light-gray;
+        color: $black;
+    }
+
+    &_dropdown {
+        &:after {
+            width: 0;
+            height: 0;
+            border: inset 0.4rem;
+            content: '';
+            border-bottom-width: 0;
+            border-top-style: solid;
+            border-color: $white transparent transparent;
+            position: relative;
+            top: 0.4rem;
+            display: inline-block;
+            float: right;
+            margin-left: 1rem;
+        }
+    }
+
+    &_hollow {
+        background: none;
+        border: rem-calc(1) solid #929A9C;
+        color: $black;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: $black;
+            border-color: $black;
+            color: $white;
+        }
+
+        &.button_dropdown {
+            &:after {
+                border-color: $primary-color transparent transparent;
+            }
+
+            &:active,
+            &:focus,
+            &:hover {
+                &:after {
+                    border-color: $white transparent transparent;
+                }
+            }
+        }
+    }
+
+    &_warning {
+        background: $warning-color;
+        color: $white;
+    }
+
+    &_secondary {
+        background: $secondary-color;
+        color: $white;
+    }
+
+    &_drop {
+        position: relative;
+        font-weight: 600;
+        padding-right: rem-calc(32);
+
+        &:after {
+            content: "";
+            background: url($imagesPath +"/path-3.svg")no-repeat center;
+            background-size: rem-calc(12 6);
+            width: rem-calc(12);
+            height: rem-calc(6);
+            display: block;
+            position: absolute;
+            right: rem-calc(13);
+            top: rem-calc(15);
+        }
+
+        &.hover,
+        &:active,
+        &:focus,
+        &:hover {
+            background: none;
+            border-color: $black;
+            color: $black;
+        }
+    }
+    @include breakpoint(small only) {
+        font-size: rem-calc(14);
+        padding: rem-calc(6 13);
+        margin-bottom: rem-calc(9);
+
+        &_drop {
+            width: 100%;
+            padding-top: rem-calc(12);
+            padding-bottom: rem-calc(12);
+            padding-right: rem-calc(40);
+            text-align: left;
+            margin-bottom: rem-calc(29);
+        }
+
+        &_submit {
+            width: 100%;
+            margin-bottom: rem-calc(20);
+            font-size: rem-calc(16);
+        }
+
+        &_big {
+            font-size: rem-calc(9);
+            padding: rem-calc(9) rem-calc(18) rem-calc(10);
+        }
+
+        &_label {
+            font-size: rem-calc(13);
+            margin-bottom: rem-calc(6);
+            padding-top: rem-calc(7);
+            padding-bottom: rem-calc(8);
+        }
+
+        &_req {
+            width: 100%;
+            text-align: center;
+            padding-top: rem-calc(17);
+            padding-bottom: rem-calc(17);
+        }
+    }
+}

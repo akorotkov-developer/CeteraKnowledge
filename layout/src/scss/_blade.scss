@@ -1,0 +1,124 @@
+.blade {
+    padding-left: rem-calc(125);
+    position: relative;
+    padding-right: rem-calc(48);
+    margin-bottom: rem-calc(20);
+
+    .slick-track {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+
+    &__slide {
+        text-align: center;
+    }
+
+    .slick__wrap {
+        position: absolute;
+        left: rem-calc(0);
+        transition: 0.3s;
+        top: rem-calc(30);
+        height: rem-calc(425);
+        overflow: hidden;
+    }
+
+    .slick__down,
+    .slick__up {
+        width: rem-calc(14);
+        position: absolute;
+        left: rem-calc(27);
+        cursor: pointer;
+        top: rem-calc(25);
+        height: rem-calc(8);
+    }
+
+    .slick__down {
+        top: 100%;
+    }
+
+    .slick__up {
+        transform: rotate(180deg);
+    }
+
+    .slick-arrow {
+        width: rem-calc(10);
+        height: rem-calc(16);
+        top: 50%;
+
+        &:active,
+        &:focus,
+        &:hover {
+            path {
+                stroke: $black;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: rem-calc(110);
+    }
+
+    .slick-next {
+        right: rem-calc(35);
+    }
+
+    .slick-dots {
+        transition: 0.3s;
+        top: rem-calc(0);
+        position: relative;
+        width: rem-calc(70);
+
+        li {
+            button {
+                margin-left: rem-calc(0);
+                margin-right: rem-calc(0);
+                background: none;
+                background-size: cover;
+                margin-bottom: rem-calc(15);
+                background-position: center;
+                background-repeat: no-repeat;
+                border: rem-calc(2) solid transparent;
+                width: rem-calc(70);
+                height: rem-calc(70);
+                border-radius: rem-calc(70);
+
+                &.js-youtube {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: rem-calc(17);
+                        height: rem-calc(17);
+                        left: calc(50% - 8px);
+                        top: calc(50% - 13px);
+                        background: url($imagesPath +"/video.svg")no-repeat center;
+                        background-size: rem-calc(17 17);
+                    }
+                }
+            }
+        }
+
+        .slick-active {
+            button {
+                border-color: $primary-color;
+            }
+        }
+    }
+    @include breakpoint(small only) {
+        padding-left: rem-calc(0);
+        padding-right: rem-calc(0);
+
+        .slick-next {
+            right: rem-calc(0);
+        }
+
+        .slick-prev {
+            left: rem-calc(0);
+        }
+
+        .slick__down,
+        .slick__up {
+            display: none;
+        }
+    }
+}

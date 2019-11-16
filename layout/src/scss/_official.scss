@@ -1,0 +1,46 @@
+.official {
+    position: relative;
+    font-size: rem-calc(16);
+    line-height: 1.7;
+    margin-bottom: rem-calc(160);
+    color: #000;
+
+    &:before {
+        content: "";
+        width: rem-calc(64);
+        height: rem-calc(43);
+        position: absolute;
+        left: rem-calc(-100);
+        top: rem-calc(0);
+        background: url($imagesPath +"/quote.svg")no-repeat center;
+        background-size: rem-calc(64 43);
+    }
+
+    &__text {
+        margin-bottom: rem-calc(14);
+    }
+
+    &__info {
+        background: rgba(239, 214, 67, 0.31);
+        font-weight: 700;
+    }
+
+    &__main {
+        font-weight: 700;
+        font-size: rem-calc(24);
+        line-height: 1.4;
+        margin-bottom: rem-calc(24);
+    }
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(11);
+        font-size: rem-calc(14);
+        line-height: 1.6;
+        &__main {
+            font-size: rem-calc(16);
+            margin-bottom: rem-calc(9);
+        }
+        &__info {
+          background: none;
+        }
+    }
+}

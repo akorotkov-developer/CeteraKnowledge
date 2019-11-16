@@ -1,0 +1,13 @@
++contacts
+  .grid-container: .grid-x.grid-padding-x
+    .large-8.cell.large-text-right.medium-order-2
+      span.contacts__menu(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+        span(data-toggle): i.fas.fa-bars.fa-lg
+      
+      span.contacts__block.contacts__block_spec: include ../common/_soc    
+      a(href='#' title='' data-toggle='search').contacts__search: i.fas.fa-lg.fa-search
+    .large-16.cell.medium-order-1
+      #responsive-menu.contacts__cab
+        +menu-top(['Новости','Дом','Еда','Музыка','Спецпроекты'])
+
+include ../common/_search-input

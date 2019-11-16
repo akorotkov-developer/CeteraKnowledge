@@ -1,0 +1,29 @@
+extends product
+
+block review
+    .part__review
+        .callout
+            #callout(data-toggler=".hide").hide
+                .grid-x.grid-padding-x.align-center: .cell.large-14
+                    .callout__title Написать отзыв
+                    form(action="#")
+                        .value
+                            .value__placeholder Имя*
+                            input.value__input(type="text",value="Ирина")
+                        .value
+                            .value__placeholder Электронная почта*
+                            input.value__input(type="email",value="ageewa@gmail.com")
+                        .file
+                            .file__select
+                                label(for="chooseFile").file__button#infoFile
+                                    include ../images/clip.svg
+                                    span Фото товара
+                                .file__name#noFile
+                                input#chooseFile.file__input(type='file', name='chooseFile')
+                        .value
+                            .value__placeholder Ваш комментарий
+                            textarea.value__area
+
+
+            .callout__adv Об этом товаре отзывов пока нет. Будьте первым!
+            .text-center: a(data-toggle='callout').button.button_call Оставить отзыв

@@ -1,0 +1,9 @@
+.cadet {
+    display: flex;
+    flex-flow: row wrap;
+    @include breakpoint(medium down) {
+        &__info {
+            margin-bottom: rem-calc(20);
+        }
+    }
+}

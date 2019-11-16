@@ -1,0 +1,11 @@
+.calendar {
+  text-align: center;
+
+  &__holiday {
+    color: $quaternary;
+  }
+
+  &__strong {
+    font-weight: $global-weight-bold;
+  }
+}

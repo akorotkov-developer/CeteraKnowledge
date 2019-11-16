@@ -1,0 +1,14 @@
+.comp {
+  &__tr {
+    vertical-align: top;
+  }
+
+  &__small {
+    font-size: rem-calc(14);
+  }
+
+  &__clear {
+    color: $dark-gray;
+    white-space: nowrap;
+  }
+}

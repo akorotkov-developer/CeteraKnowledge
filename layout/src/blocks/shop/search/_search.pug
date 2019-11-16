@@ -1,0 +1,8 @@
+mixin search(title='Введите поисковый запрос',border)
+  form.search(action='shop-search.html' method='get')
+    input.search__input(class=border==true ? 'search__input_border': '' type='text', value='' placeholder=title)
+    .search__cont
+      if block
+        block
+      else
+        button.search__button(type='submit'): i.fas.fa-search

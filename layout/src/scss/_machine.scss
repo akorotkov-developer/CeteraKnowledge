@@ -1,0 +1,72 @@
+.machine {
+    margin-bottom: rem-calc(20);
+
+    &__header {
+        position: relative;
+    }
+
+    .slick-arrow {
+        width: rem-calc(50);
+        height: rem-calc(50);
+        top: rem-calc(4);
+
+        &:active,
+        &:focus,
+        &:hover {
+            circle {
+                fill: #000;
+            }
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    .slick-next {
+        right: auto;
+        left: calc(66% + 60px);
+    }
+
+    .slick-prev {
+        left: 66%;
+    }
+
+    &__button {
+        display: inline-block;
+        text-transform: uppercase;
+        padding-left: rem-calc(5);
+        padding-right: rem-calc(5);
+        text-align: center;
+        margin-bottom: rem-calc(14);
+        padding-top: rem-calc(14);
+        padding-bottom: rem-calc(14);
+        width: 60%;
+        border-radius: rem-calc(5);
+        font-weight: 700;
+        background: $primary-color;
+        color: $black;
+        font-size: rem-calc(20);
+    }
+    @include breakpoint(medium down) {
+      .slick-arrow {
+        width: rem-calc(30);
+        height: rem-calc(30);
+        top: rem-calc(8);
+      }
+      .slick-next {
+        right: rem-calc(0);
+        left:auto;
+      }
+      .slick-prev {
+        right: rem-calc(40);
+        left:auto;
+      }
+        &__button {
+          width:70%;
+            font-size: rem-calc(14);
+            padding-top: rem-calc(12);
+            padding-bottom: rem-calc(11);
+        }
+    }
+}

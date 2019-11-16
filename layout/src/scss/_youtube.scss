@@ -1,0 +1,55 @@
+.youtube {
+    img {
+        cursor: pointer;
+        position: absolute;
+        width: 100%;
+        top: -16.82%;
+        left: 0;
+        opacity: 0.7;
+    }
+
+    iframe {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    &_curved {
+        width: rem-calc(482);
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    &__main {
+        background-color: #000;
+        margin-bottom: rem-calc(20);
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &__button {
+        width: rem-calc(60);
+        height: rem-calc(60);
+        background: url($imagesPath +"/video-button.svg")no-repeat center;
+        background-size: rem-calc(60 60);
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        position: absolute;
+        cursor: pointer;
+    }
+    @include breakpoint(medium down) {
+        &_curved {
+
+            max-width: none;
+            left: -0.5 *map-get($grid-padding-gutters,small);
+            position: relative;
+            width: calc(100% + 28px);
+        }
+    }
+}

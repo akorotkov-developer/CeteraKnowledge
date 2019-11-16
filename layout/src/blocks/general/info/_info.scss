@@ -1,0 +1,19 @@
+.info {
+    margin-bottom: rem-calc(64);
+
+    &_low {
+        margin-bottom: rem-calc(0);
+    }
+    &_high {
+      margin-bottom: rem-calc(84);
+    }
+    &__block {
+      padding-top: rem-calc(7);
+    }
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(24);
+        &_null {
+          margin-bottom: rem-calc(0);
+        }
+    }
+}

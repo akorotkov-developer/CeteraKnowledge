@@ -1,0 +1,56 @@
+# Use root/example as user/password credentials
+version: '3.7'
+services:
+  db:
+    image: percona:5.7
+    container_name: ${PROJECT_NAME}_db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_USER: cetera
+      MYSQL_DATABASE: cetera
+      MYSQL_PASSWORD: cetera
+      TZ: ${TZ:-Europe/Moscow}
+    volumes:
+      - cetera_db:/var/lib/mysql:consistent
+      - ${PWD}/boilerplate/configs/mysql:/etc/my.cnf.d:ro
+      - ${PWD}/tmp/initdb.d:/docker-entrypoint-initdb.d:ro
+    ports:
+      # что-бы можно было подключиться из шторма к бд внутри контейнера
+      - "127.0.0.1:53306:3306"
+  nginx:
+    image: registry.cetera.su/boilerplate/docker/nginx
+    container_name: ${PROJECT_NAME}_nginx
+    volumes:
+      - ${PWD}/www:/var/www/_default/www:ro
+      - ${PWD}/boilerplate/nginx.conf:/etc/nginx/sites-available/_default:ro
+    ports:
+      - 127.0.0.1:8080:80
+    environment:
+      RUN_MODE: development
+      PROJECT_CMS_TYPE: ${PROJECT_CMS_TYPE}
+  memcached:
+    image: memcached
+    container_name: ${PROJECT_NAME}_memcached
+  php:
+    user: "${UID}:${GID}"
+    # можно указать и другие версии php - 5.6-fpm, 7.0-fpm и 7.2-fpm
+    image: registry.cetera.su/boilerplate/docker/php:${PROJECT_PHP_VERSION:-7.1-fpm}
+    container_name: ${PROJECT_NAME}_php
+    # в проекте можно не делать какие-то вещи (отправка писем на хитах, например)
+    # если $ENV['RUN_MODE'] == 'development'
+    environment:
+      RUN_MODE: development
+      TZ: ${TZ:-Europe/Moscow}
+    volumes:
+      - ${PWD}:/var/www/_default:delegated
+      - /var/www/_default/working
+      - /var/www/_default/boilerplate
+  mailcatcher:
+    image: registry.cetera.su/boilerplate/docker/mailcatcher:latest
+    container_name: ${PROJECT_NAME}_mailcatcher
+    ports:
+      - 127.0.0.1:10080:1080
+volumes:
+  cetera_db:
+    name: ${PROJECT_NAME}_db
+    external: false

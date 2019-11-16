@@ -1,0 +1,63 @@
+extends shop-index
+
+block page
+    +breadcrumbs(['Главная','О нас'])
+
+    .grid-container.info
+        h1 О нас
+        .grid-x.grid-padding-x
+            .cell.large-12.large-offset-4
+                .official
+                    .official__text Более 10 лет мы являемся официальными представителями Cub Cadet в России. В нашем интернет-магазине вы можете приобрести только оригинальную продукцию, аксессуары, расходные материалы и запасные части MTD.
+                    .official__main Наличие официального представительства  позволяет нам оперативно решать вопросы сервиса и гарантийного обслуживания
+                    .official__text Для удобства мы принимаем <span class="official__info">любую форму оплаты</span>. Для держателей карт платежных систем Мир и MasterCard предусмотрен кэшбэк 10%.
+            .cell.large-6.large-offset-1
+                .director
+                    .grid-x.grid-padding-x
+                        .large-24.medium-12.cell.small-7
+                            .director__wrap
+                                img(src="./i/director.png", alt="").director__img
+                        .large-24.medium-12.cell.small-17
+                            .director__name Валентина Дроздова
+                            .director__work Генеральный директор представительства в России
+        .grid-x.grid-padding-x.book
+            .cell
+                p.book__icon 
+                    img(src="./i/mtd.svg", alt="")
+
+            .cell.large-12
+                p.book__img
+                    img(src="./i/office.png", alt="")   
+            .cell.large-12
+                p <strong>MTD Products Inc.</strong> является одним из крупнейших производителей садово-паркового оборудования. Штаб-квартира компании располагается в Кливленде, США, а производственные мощности находятся в Америке, Европе и Китае.
+                p Компания MTD - the Modern Tool and Die Company (Современный Инструмент и Литьё) - была основана в 1932 году тремя немецкими инженерами, эмигрировавшими в США. Компания MTD - the Modern Tool and Die Company (Современный Инструмент и Литьё) - была основана в 1932 году тремя немецкими инженерами, эмигрировавшими в США. Компания MTD - the Modern Tool and Die Company (Современный Инструмент и Литьё) - была основана в 1932 году тремя немецкими инженерами, эмигрировавшими в США.     
+    .grid-container.artist    
+        .grid-x.large-up-4.medium-up-2.small-up-2
+            for i in [1,2,3,4,5,6,7,8]
+                .cell.art
+                    .art__info МТД выпускает свою первую решетку
+                    img(src="./i/a"+i+".jpg", alt="").art__img
+    .grid-container.info: .grid-x.grid-padding-x 
+        .cell              
+            h2 Не нашли подходящую технику?
+        .cell.large-12  
+            form.request
+                .request__info Оставьте заявку и менеджер подберет вам её
+                .grid-x.grid-padding-x
+                    .large-10.cell.medium-12
+                        label.level
+                            span.level__text Телефон
+                            input(type="tel",placeholder="+7")
+                    .large-14.cell.medium-12
+                        label.level
+                            span.level__text Электронная почта
+                            input(type="email")
+                    .cell
+                        label.level
+                            span.level__text.show-for-small-only Сообщение
+                            textarea(rows='4')     
+                        .request__agree Отправляя данные я соглашаюсь с
+                            | 
+                            a(href="#").request__link правилами сайта.
+                        .request__mobile    
+                        .button.button_req(type="submit") Отправить  

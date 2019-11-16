@@ -1,0 +1,19 @@
+mixin tile(instock, incart)
+  .tile
+    a(href="#" title='').tile__clear
+      i.far.fa-lg.fa-times-circle.picture
+      | Убрать
+    a(href="shop-product.html" title='').tile__link: img(src='./i/photo.svg' alt='Товар' ).tile__img
+    a(href='shop-product.html' title='').tile__title Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
+    .tile__price
+      | 73&nbsp;250&nbsp;
+      i.fas.fa-ruble-sign
+    if instock
+      if incart
+        i.fas.fa-check.picture
+        | В корзине
+      unless incart
+        +button('Купить','button_hollow','shop-cart.html')
+      
+    unless instock
+      span.tile__no Нет в наличии

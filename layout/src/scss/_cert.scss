@@ -1,0 +1,61 @@
+.cert {
+    text-align: center;
+
+    .slick-arrow {
+        width: rem-calc(50);
+        height: rem-calc(50);
+        bottom: rem-calc(10);
+        top: auto;
+
+        &:active,
+        &:focus,
+        &:hover {
+            circle {
+                fill: #000;
+            }
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    .slick-next {
+        left: rem-calc(-100);
+    }
+
+    .slick-prev {
+        left: rem-calc(-160);
+    }
+    @include breakpoint(medium down) {
+        .slick-arrow {
+            top: 45%;
+            width: rem-calc(30);
+            height: rem-calc(30);
+
+            circle {
+                fill: #000;
+            }
+
+            path {
+                fill: #fff;
+            }
+        }
+
+        .slick-next {
+            left: auto;
+            right: rem-calc(34);
+        }
+
+        .slick-prev {
+            left: rem-calc(34);
+        }
+    }
+      @include breakpoint(small only) {
+        &__slide {
+          img {
+            width: rem-calc(201);
+          }
+        }
+     }
+}

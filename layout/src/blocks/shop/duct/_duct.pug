@@ -1,0 +1,48 @@
+mixin duct(discount, onDemand, inCart, inFavourites)
+  .grid-x.grid-padding-x.duct
+    .cell.medium-4.large-2.hide-for-small-only
+      .duct__img: img(src='./i/photo.svg' alt='Товар')
+    .cell.medium-10.large-12
+      h6
+        if discount
+          +label('<i class="far fa-star picture"></i>Акция','label_action')
+        a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+      a.duct__cat(href='shop-catalog.html') Шуроповерты
+    .cell.medium-10.large-10
+      .duct__info
+        .grid-x.grid-padding-x
+          .cell.medium-16.large-8.medium-order-2
+            if onDemand
+              span.duct__no Нет в наличии
+            else
+              .duct__price
+                | 10&nbsp;250&nbsp;
+                i.fas.fa-ruble-sign
+              if discount
+                div.duct__old
+                  | 9&nbsp;750&nbsp;
+                  i.fas.fa-ruble-sign
+          .cell.small-10.medium-24.large-8.medium-order-3
+            if onDemand
+              a(href='#' title='')
+                i.far.fa-bell.picture
+                | Заказать
+            else
+              if inCart
+                a(href='shop-cart.html' title='')
+                  span
+                    i.fas.fa-check.fa-lg.picture
+                    | В корзине
+              else
+                +button('<i class="fas fa-shopping-basket picture"></i>Купить','button_hollow','shop-cart.html')
+
+          .cell.small-14.medium-8.medium-order-1.text-right.medium-text-left
+            if !inFavourites
+              a.duct__favor(data-open="add-to-favourites-auth-popup")
+                i.far.fa-heart.fa-lg
+
+            else
+              a.duct__favor(href='' title='Удалить из запомненных')
+                i.fas.fa-heart.fa-lg
+            a.duct__favor(href='shop-compare.html' title='')
+              i.fas.fa-balance-scale.fa-lg

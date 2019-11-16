@@ -1,0 +1,13 @@
+.news {
+@include margin-level(bottom,red);
+
+  &__img {
+    @include margin-level(bottom,red);
+  }
+
+  &__title {
+    display: block;
+    font-size: rem-calc(18);
+    @include margin-level(bottom,blue);
+  }
+}

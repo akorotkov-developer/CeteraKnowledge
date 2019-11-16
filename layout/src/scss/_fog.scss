@@ -1,0 +1,37 @@
+.fog {
+    padding-top: rem-calc(100);
+    padding-bottom: rem-calc(98);
+    background: linear-gradient(284.47deg, #E9F0F2 1.08%, rgba(233, 240, 242, 0.51) 99.7%);
+
+    &_top {
+      margin-bottom: rem-calc(45);
+        padding-top: rem-calc(6);
+    }
+
+    &_mini {
+        padding-bottom: rem-calc(50);
+        padding-top: rem-calc(50);
+        margin-bottom: rem-calc(60);
+    }
+
+    &__sidebar {
+        padding-right: rem-calc(20);
+        padding-top: rem-calc(40);
+    }
+    @include breakpoint(medium down) {
+        padding-top: rem-calc(60);
+        padding-bottom: rem-calc(40);
+    }
+    @include breakpoint(small only) {
+        padding-top: rem-calc(40);
+        padding-bottom: rem-calc(35);
+        &_top
+        {
+          padding-top: rem-calc(0);
+        }
+        &__sidebar {
+          padding-top: rem-calc(0);
+          padding-right: rem-calc(0);
+        }
+    }
+}

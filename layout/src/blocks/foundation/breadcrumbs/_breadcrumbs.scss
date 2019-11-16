@@ -1,0 +1,43 @@
+.breadcrumbs {
+    display: flex;
+    width: auto;
+    white-space: nowrap;
+    margin-top: rem-calc(35);
+    margin-bottom: rem-calc(35);
+
+    &-wrap {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    a {
+        color: #666E6F;
+        font-weight: 400;
+        text-transform: none;
+        font-size: rem-calc(12);
+    }
+
+    .current {
+        color: #000;
+        font-weight: 400;
+        text-transform: none;
+        font-size: rem-calc(12);
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    & > li:not(:last-child)::after {
+        width: rem-calc(6);
+        content: "";
+        display: inline-block;
+        margin-left: rem-calc(16);
+        margin-right: rem-calc(16);
+        height: rem-calc(9);
+        background: url($imagesPath +"/chevron.svg")no-repeat center;
+        background-size: rem-calc(6 9);
+    }
+    @include breakpoint(medium down) {
+        margin-top: rem-calc(18);
+        margin-bottom: rem-calc(17);
+    }
+}

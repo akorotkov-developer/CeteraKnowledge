@@ -1,0 +1,13 @@
+.grid-x.grid-padding-x(data-equalizer='readCommentTile', data-equalize-by-row='true')
+  .medium-12.cell
+    h2 Читают
+    +project('','readCommentTile')
+      .project__text
+        i.far.fa-eye.picture
+        span.project__icon Читают: 50
+  .medium-12.cell
+    h2 Комментируют
+    +project('','readCommentTile')
+      .project__text
+        i.fas.fa-comments.picture
+        span.project__icon Комментариев: 50

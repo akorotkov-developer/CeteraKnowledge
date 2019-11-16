@@ -1,0 +1,246 @@
+.footer {
+    //begin sticky footer
+    margin-top: auto;
+    //end sticky footer
+    padding-top: rem-calc(48);
+    padding-bottom: rem-calc(37);
+    color: $white;
+    background: #39393D;
+    font-size: rem-calc(14);
+
+    &__mail {
+        font-size: rem-calc(14);
+        font-weight: 400;
+        display: inline-block;
+        margin-bottom: rem-calc(11);
+        color: $white;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: rgba(255, 255, 255, 0.3);
+
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $light-gray;
+        }
+    }
+
+    &__cetera {
+        font-size: rem-calc(14);
+        font-weight: 400;
+        display: block;
+        color: $white;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $light-gray;
+        }
+    }
+
+    &__copy {
+        color: $medium-gray;
+        font-weight: 300;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__tel {
+        font-size: rem-calc(24);
+        font-weight: 700;
+        color: $white;
+        display: block;
+        margin-bottom: rem-calc(5);
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $light-gray;
+        }
+    }
+
+    &__agree {
+        color: $medium-gray;
+        font-size: rem-calc(14);
+        font-weight: 300;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: rem-calc(24);
+
+        svg {
+            width: rem-calc(164);
+            height: rem-calc(24);
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    &__nav {
+        margin-bottom: rem-calc(60);
+    }
+
+    &__shop {
+        font-size: rem-calc(20);
+        font-weight: 700;
+        color: $white;
+        display: block;
+        margin-bottom: rem-calc(20);
+
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $light-gray;
+        }
+    }
+
+    &__consult,
+    &__corp,
+    &__table {
+        display: none;
+    }
+
+    &__link {
+        display: block;
+        font-size: rem-calc(14);
+        color: $white;
+        margin-bottom: rem-calc(7);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: rgba(255, 255, 255, 0.3);
+
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    &__bottom {
+        align-self: bottom;
+    }
+    @include breakpoint(small only) {
+        padding-top: rem-calc(40);
+
+padding-bottom: rem-calc(0);
+        &__consult {
+            display: block;
+            text-align: center;
+            font-size: rem-calc(12);
+            font-weight: 400;
+            color: $white;
+
+            &_border {
+                padding-top: rem-calc(11);
+                padding-bottom: rem-calc(11);
+                border-top: rem-calc(1) solid rgba(210, 216, 218, 0.28);
+                padding-top: rem-calc(10);
+            }
+        }
+
+        &__cetera {
+            font-size: rem-calc(14);
+            font-weight: 700;
+            color: $white;
+            text-align: center;
+            display: block;
+            margin-bottom: rem-calc(15);
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $light-gray;
+            }
+        }
+
+        &__prod {
+            font-size: rem-calc(10);
+            font-weight: 600;
+            display: block;
+            text-transform: uppercase;
+            color: $white;
+            width: 50%;
+            text-align: center;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $light-gray;
+            }
+        }
+
+        &__bottom {
+            text-align: center;
+            width: 100%;
+        }
+
+        &__table {
+            padding-top: rem-calc(11);
+            padding-bottom: rem-calc(11);
+            position: relative;
+            border-top: rem-calc(1) solid rgba(210, 216, 218, 0.28);
+            border-bottom: rem-calc(1) solid rgba(210, 216, 218, 0.28);
+            margin-bottom: rem-calc(25);
+            display: flex;
+            flex-flow: row wrap;
+
+            &:after {
+                position: absolute;
+                content: "";
+                height: rem-calc(12);
+                width: rem-calc(1);
+                background: $white;
+                left: 50%;
+                top: rem-calc(13);
+            }
+        }
+
+        &__corp {
+            display: block;
+            font-size: rem-calc(16);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: rem-calc(25);
+            color: $white;
+            text-transform: uppercase;
+            &:active,
+            &:focus,
+            &:hover {
+                color: $light-gray;
+            }
+
+        }
+
+        &__agree,
+        &__copy {
+            display: none;
+        }
+
+        &__logo {
+            margin-bottom: rem-calc(24);
+            text-align: center;
+            display: block;
+
+            svg {
+                width: rem-calc(122);
+                height: rem-calc(18);
+            }
+        }
+    }
+}

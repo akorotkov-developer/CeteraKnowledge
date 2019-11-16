@@ -1,0 +1,201 @@
+doctype html
+html.no-js(lang='ru')
+  include components/service/_head
+  body
+    include ../blocks/foundation/callout/_callout
+    include ../blocks/foundation/label/_label
+    include ../blocks/foundation/pagination/_pagination
+    include ../blocks/foundation/accordion/_accordion
+    include ../blocks/foundation/button/_button
+    include ../blocks/foundation/slider/_slider
+    include ../blocks/foundation/close-button/_close-button
+    include ../blocks/foundation/breadcrumbs/_breadcrumbs
+    include ../blocks/foundation/badge/_badge
+    
+    include ../blocks/general/side/_side
+    include ../blocks/general/step/_step
+    include ../blocks/general/contacts/_contacts
+    include ../blocks/general/cat/_cat
+    include ../blocks/general/dd/_dd
+    include ../blocks/general/share/_share
+    include ../blocks/general/art/_art
+    include ../blocks/general/partners/_partners
+    include ../blocks/general/promo/_promo
+    include ../blocks/general/carousel-main/_carousel-main
+    include ../blocks/general/cities/_cities
+    
+    include ../blocks/shop/reg/_reg
+    include ../blocks/shop/quant/_quant
+    include ../blocks/shop/rating/_rating
+    include ../blocks/shop/capt/_capt
+    include ../blocks/shop/comp/_comp
+    include ../blocks/shop/growth/_growth
+    include ../blocks/shop/tile/_tile
+    include ../blocks/shop/commodity/_commodity
+    include ../blocks/shop/mark/_mark
+    include ../blocks/shop/offspring/_offspring
+    include ../blocks/shop/duct/_duct
+    include ../blocks/shop/prod/_prod
+    include ../blocks/shop/prod/_prod-compare
+    include ../blocks/shop/search/_search
+    include ../blocks/shop/radio/_radio
+    include ../blocks/shop/menu-top/_menu-top
+    
+    
+    include components/shop/_header
+
+    include components/shop/_reveal-no-color
+    include components/shop/_add-to-favourites-auth-popup
+
+    block page
+      .grid-container
+        .oil
+          for i in [1,2]
+            .oil__slide
+              .oil__wrap(style="background-image:url(./i/o1.jpg);")
+                .grid-x.grid-padding-x
+                  .large-12.cell.medium-13.small-15
+                    .oil__date с 1 по 14 апреля
+                    .oil__title Получи скидку 50% на масло
+                    .oil__buy При покупке любой садовой техники
+                    a(href="#").button.button_big Получить
+        .grid-x.grid-padding-x
+          .cell.xlarge-6.medium-12.small-11: .delivery
+              .grid-x.grid-padding-x
+                .shrink.cell
+                  .delivery__wrap
+                    img(src="./images/a1.svg", alt="")
+                .auto.cell.align-self-middle: .delivery__text Бесплатная доставка
+          .cell.xlarge-6.medium-12.small-13: .delivery
+              .grid-x.grid-padding-x
+                .shrink.cell
+                  .delivery__wrap
+                    img(src="./images/a2.svg", alt="")
+                .auto.cell.align-self-middle: .delivery__text Товар всегда в наличии
+          .cell.xlarge-6.medium-12.small-11: .delivery
+              .grid-x.grid-padding-x
+                .shrink.cell
+                  .delivery__wrap
+                    img(src="./images/a3.svg", alt="")
+                .auto.cell.align-self-middle: .delivery__text Работаем по всей России
+          .cell.xlarge-6.medium-12.small-13: .delivery
+              .grid-x.grid-padding-x
+                .shrink.cell
+                  .delivery__wrap
+                    img(src="./images/a4.svg", alt="")
+                .auto.cell.align-self-middle: .delivery__text Цены ниже рыночных
+      .fog
+        .grid-container
+          .grid-x.grid-padding-x
+            .cell.large-9.text-center.large-text-left: h2 Чаще всего покупают
+            .cell.large-auto.large-text-right
+              a(data-href="#pan1").button.button_tab.button_white.button_left.js-open Топ-20
+              a(data-href="#pan2").button.button_tab.button_white.button_left Газонокосилки
+              a(data-href="#pan3").button.button_tab.button_white.button_left Минитрактора
+              a(data-href="#pan4").button.button_tab.button_white.button_left Снегоуборщики
+              
+        include components/common/_tabs
+        
+      .charge(style="background-image:url(./i/9.jpg);")
+        .grid-container
+          .charge__logo: include ../images/logo.svg
+          .charge__title Предпродажная подготовка
+      .fog
+        .grid-container
+          .grid-x.grid-padding-x
+            .cell.large-9.text-center.large-text-left: h2 О, скидки! Надо брать
+            .cell.large-auto.large-text-right.hide-for-small-only
+              a(href="#").button.button_white Перейти в раздел
+        include components/common/_prods  
+        include components/common/_button
+        
+      .grid-container.cube
+        .grid-x.grid-padding-x
+          .large-10.cell.cadet     
+            .cadet__info
+              h2.text-center.large-text-left О компании Cub Cadet
+              p Cub Cadet (Куб Кадет) - всемирно известный американский бренд техники для ухода за садом, который знаменит производством мини-тракторов и садовых райдеров премиум класса, также в линейке продукции имеются мотоблоки, косилки, бензопилы, снегоуборщики, вертикуттеры, садовые пылесосы, а так же мотовездеходы.
+              p Большинство компаний, работающих на международном рынке, имеют несколько центров производства своих товаров. Эти заводы обычно располагаются так, xтобы быть ближе к наибольшему количеству клиентов. Поэтому часть техники Cub Cadet, продаваемой в России, привозится непосредственно из США, другая часть производится в Европе
+            .align-self-bottom: .grid-x.grid-padding-x.small-up-2
+              .cell
+                .factory
+                  .factory__text 3 года гарантии
+                  img(src="./i/f1.jpg", alt="").factory__img
+              .cell
+                .factory
+                  .factory__text Оригинальные запчасти
+                  img(src="./i/f2.jpg", alt="").factory__img
+          .large-offset-2.large-12.cell
+            .machine
+              for i in [1,2]
+                a(href="#").machine__slide
+                  .machine__header
+                    .machine__button Садовые тракторы
+                  img(src="./i/m1.png", alt="")
+      .client(style="background-image:url(./i/g.jpg);")
+        .grid-container
+          .grid-x.grid-padding-x
+            .medium-12.cell
+              .grid-x.grid-padding-x.client__prime
+                .large-12.cell.client__info
+                  h2 Сертификаты
+                  p Компания ООО «МК-Энергосет»  — является официальным дистрибьютором торговой марки Cub&#160;Cadet в  России.
+                .large-12.cell
+                  .cert
+                    for i in [1,2]
+                      .cert__slide
+                        img(src="./i/cert.jpg", alt="")
+            .medium-11.large-11.medium-offset-1.cell
+              .grid-x.grid-padding-x.large-up-2.client__bank.medium-up-1.small-up-2
+                .cell
+                  a(href="#").grid-x.grid-padding-x.bank
+                    .medium-shrink.cell.bank__wrap
+                      img(src="./images/i1.svg", alt="").bank__icon
+                    .auto.cell.bank__block: .bank__text Принимаем банковские карты
+                      
+                .cell
+                  a(href="#").grid-x.grid-padding-x.bank
+                    .medium-shrink.cell.bank__wrap
+                      img(src="./images/i2.svg", alt="").bank__icon
+                    .auto.cell.bank__block: .bank__text Отзывы наших покупателей
+                .cell
+                  a(href="#").grid-x.grid-padding-x.bank
+                    .medium-shrink.cell.bank__wrap
+                      img(src="./images/i3.svg", alt="").bank__icon
+                    .auto.cell.bank__block: .bank__text Предпродажная подготовка
+                .cell
+                  a(href="#").grid-x.grid-padding-x.bank
+                    .medium-shrink.cell.bank__wrap
+                      img(src="./images/i4.svg", alt="").bank__icon
+                    .auto.cell.bank__block: .bank__text Дипломы, достижения
+                .cell
+                  a(href="#").grid-x.grid-padding-x.bank
+                    .medium-shrink.cell.bank__wrap
+                      img(src="./images/i5.svg", alt="").bank__icon
+                    .auto.cell.bank__block: .bank__text Кредитование от&#160;5&#160;минут
+                .cell
+                  a(href="#").grid-x.grid-padding-x.bank
+                    .medium-shrink.cell.bank__wrap
+                      img(src="./images/i6.svg", alt="").bank__icon
+                    .auto.cell.bank__block: .bank__text Полезные статьи
+      include components/common/_tractor
+    block info-freebie    
+      .freebie: .grid-container
+        .grid-x.grid-padding-x
+          .large-9.cell        
+            h2.freebie__title Скидка 500 ₽ на&#160;первую покупку
+            a(href="#").freebie__subscribe Подпишись на рассылку
+          form.large-15.cell
+            .grid-x.grid-padding-x
+              .cell.medium-auto   
+                input(type="text",placeholder="Электронная почта").freebie__input
+              .cell.medium-shrink
+                button(type="submit").button.button_submit Подписаться
+              .cell
+                a(href="#").freebie__link Нажимая на кнопку, вы даёте согласие на обработку персональных данных.
+  
+              
+                       
+      
+    include components/shop/_footer
+    include components/service/_js

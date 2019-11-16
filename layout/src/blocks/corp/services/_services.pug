@@ -1,0 +1,13 @@
+mixin services(title,eq)
+  .services(data-equalizer-watch=eq)
+    .services__block
+      img(src='./i/photo.svg' alt='Сверхскорость').services__img
+    if title
+      h4.services__title= title
+    else  
+      h4.services__title Сверхскорость
+    .services__block    
+      if block
+        block
+      else
+        | Используем готовую к установке Cetera CMS. Откроем первую версию сайта в течение 3 дней. Привлечем клиентов сразу.

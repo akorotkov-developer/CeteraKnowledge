@@ -1,0 +1,24 @@
+.prove {
+    margin-left: rem-calc(-8);
+    margin-right: rem-calc(-8);
+
+    &__slide {
+        padding-right: rem-calc(8);
+        padding-left: rem-calc(8);
+        padding-bottom: rem-calc(20);
+    }
+    @include breakpoint(medium down) {
+        &__slide {
+            opacity: 0.5;
+
+            &.slick-current {
+                opacity: 1;
+            }
+        }
+    }
+    @include breakpoint(small only) {
+        &__slide {
+            width: rem-calc(246);
+        }
+    }
+}

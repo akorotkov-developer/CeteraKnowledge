@@ -1,0 +1,12 @@
+mixin event(title, dataEq, light,titleEq='title')
+  .cell.event
+    .event__block(data-equalizer-watch=dataEq class=light ? '' : 'event__block_main')
+      .event__date 27.02.2019
+      h6(data-equalizer-watch=titleEq)
+        a(href='#' title='')= title
+      .event__place
+        if block
+          block
+        else
+          i.fas.fa-map-marker-alt.picture
+          | Москва,&nbsp;пр-кт Ленина, д. 1, 123

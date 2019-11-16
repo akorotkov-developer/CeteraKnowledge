@@ -1,0 +1,42 @@
+mixin prod(isAvailable,title='Газонокосилка бензиновая несамоходная «Cub Cadet» CC LM1 AP42',isBrick)
+    -var randNum =  Math.ceil(Math.random() * 4);
+    .prod(class=isBrick?"prod_brick":""): .prod__wrap
+        .prod__spec
+          if(randNum===1)
+            .prod__label Хит продаж
+            .prod__label.prod__label_action Акция
+          if(randNum===3)
+            .prod__label.prod__label_new Новинка
+          if(randNum===4)
+            .prod__label.prod__label_spec Спецпредложение
+        
+        .prod__discount −20%
+        .prod__top
+            a(href="#").prod__compare
+                include ../../../images/compare.svg
+            a(href="#").prod__heart  
+                include ../../../images/prod-heart.svg
+        .prod__main
+            a(href="#").prod__slide
+                img(src="./i/g1.png", alt="")      
+            a(href="#").prod__slide
+                img(src="./i/g2.png", alt="")      
+            a(href="#").prod__slide
+                img(src="./i/g3.png", alt="")    
+        .prod__footer
+            +rating
+
+            .prod__title !{title}
+
+            .prod__price 48 160 ₽
+            .prod__old-price 23 160 ₽
+            if (isAvailable)
+                .prod__available
+                    include ../../../images/tick.svg
+                    .prod__desc В наличии
+            else
+                .prod__available.prod__available_none
+                    include ../../../images/tick.svg
+                    .prod__desc Нет в наличии
+            a(href="#").prod__basket
+                include ../../../images/bask.svg

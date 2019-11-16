@@ -1,0 +1,15 @@
+.level {
+    &__text {
+        display: block;
+        color: #414141;
+        font-weight: 200;
+        font-size: rem-calc(16);
+        line-height: 1.25;
+        margin-bottom: rem-calc(5);
+    }
+    @include breakpoint(small only) {
+        &__text {
+            font-size: rem-calc(14);
+        }
+    }
+}

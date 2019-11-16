@@ -1,0 +1,72 @@
+.duct {
+  &__img {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__title {
+    font-size: rem-calc(16);
+    margin-bottom: rem-calc(10);
+    display: block;
+  }
+
+  &__old {
+    text-decoration: line-through;
+    color: $dark-gray;
+  }
+
+  &__cost {
+    font-size: rem-calc(14);
+  }
+
+  &__favor {
+    color: $dark-gray;
+    margin-right: rem-calc(8);
+  }
+
+  &__small {
+    font-size: rem-calc(11);
+    display: block;
+    margin-bottom: rem-calc(3);
+  }
+
+  &__price {
+    font-weight: $global-weight-bold;
+    font-size: rem-calc(21);
+
+    &_cost {
+      font-size: rem-calc(14);
+    }
+  }
+
+  &__no {
+    font-style: italic;
+    color: $dark-gray;
+  }
+
+  &__info {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__cat {
+    margin-bottom: rem-calc(10);
+    display: block;
+    color: $dark-gray;
+    font-size: rem-calc(13);
+    font-weight: 400;
+  }
+  @include breakpoint(medium down) {
+    &__small {
+      margin-right: rem-calc(8);
+      display: inline-block;
+    }
+
+    &__old {
+      margin-bottom: rem-calc(10);
+    }
+  }
+  @include breakpoint(small only) {
+    &__cat {
+      display: none;
+    }
+  }
+}

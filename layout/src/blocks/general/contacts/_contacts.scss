@@ -1,0 +1,87 @@
+.contacts {
+  padding-top: rem-calc(13);
+  padding-bottom: rem-calc(7);
+  background: $primary-color;
+  font-size: rem-calc(13);
+
+  &__icon {
+    margin-right: rem-calc(4);
+    font-size: rem-calc(17);
+    line-height: 0.75rem;
+  }
+
+  &__search {
+    color: $white;
+    font-weight: $global-weight-bold;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  &__block {
+    line-height: 1;
+    font-size: rem-calc(22);
+    margin-right: rem-calc(8);
+  }
+
+  &__link {
+    display: inline-block;
+    color: $white;
+    font-weight: $global-weight-bold;
+    margin-right: rem-calc(10);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  &__menu {
+    color: $white;
+    cursor: pointer;
+    display: none;
+    margin-right: rem-calc(10);
+  }
+
+  &__cab {
+    padding-bottom: rem-calc(7);
+  }
+
+  &__info {
+    padding-bottom: rem-calc(7);
+    text-align: right;
+  }
+  @include breakpoint(medium down) {
+    text-align: center;
+
+    &__info {
+      text-align: center;
+    }
+  }
+  @include breakpoint(small only) {
+    padding-bottom: rem-calc(13);
+
+    &__block {
+      &_spec {
+        display: inline-block;
+        width:calc(100% - 30px);
+      }
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__menu {
+      display: inline-block;
+    }
+
+    &__info {
+      text-align: left;
+    }
+  }
+}

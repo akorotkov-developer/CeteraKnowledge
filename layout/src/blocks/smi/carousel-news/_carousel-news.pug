@@ -1,0 +1,36 @@
+mixin carousel-news()
+  if block
+    block
+  else
+    .large-16.cell
+      .carousel-news
+        .carousel-news__item(data-equalizer-watch='top-news' style='background-image: url(./i/image.svg);')
+          a(href='#', title='').carousel-news__link Заголовок новости 1
+        .carousel-news__item.carousel-news__item_medium-gray(data-equalizer-watch='top-news' style='background-image: url(./i/image.svg);')
+          a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 123
+        .carousel-news__item(data-equalizer-watch='top-news' style='background-image: url(./i/image.svg);')
+          a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 321
+        .carousel-news__item.carousel-news__item_medium-gray(data-equalizer-watch='top-news' style='background-image: url(./i/image.svg);')
+          a(href='#', title='').carousel-news__link Длинный-длинный-длинный заголовок новости 777
+
+    .large-8.show-for-large.cell
+      .carousel-news-links(data-equalizer-watch='top-news')
+        a.carousel-news-anchor(href='#', title='#')
+          strong.carousel-news-date 12:08
+          | Длинный-длинный заголовок новости 1
+        hr
+        a.carousel-news-anchor(href='#', title='#')
+          strong.carousel-news-date 10:10
+          | Длинный-длинный заголовок новости 123
+        hr
+        a.carousel-news-anchor(href='#', title='#')
+          strong.carousel-news-date 10:00
+          | Длинный-длинный заголовок новости 321
+        hr
+        a.carousel-news-anchor(href='#', title='#')
+          strong.carousel-news-date 9:53
+          | Длинный-длинный-длинный заголовок новости 777
+        hr
+
+        a(href='#', title='#') Архив новостей
+          i.fas.fa-long-arrow-alt-right.canv

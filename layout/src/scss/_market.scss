@@ -1,0 +1,20 @@
+.market {
+  &__slide {
+    margin-left: rem-calc(7);
+    margin-right: rem-calc(7);
+    width: rem-calc(290);
+  }
+  .slick-arrow {
+    top:auto;
+    bottom: rem-calc(80);
+  }
+  .slick-next {
+    right: rem-calc(70);
+  }
+  .slick-prev {
+    left: rem-calc(70);
+  }
+    @include breakpoint(medium down) {
+    padding-left: rem-calc(16);
+  padding-right: rem-calc(16); }
+}

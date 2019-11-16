@@ -1,0 +1,62 @@
+.pagination {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    li {
+        margin-left: rem-calc(6);
+        margin-right: rem-calc(6);
+    }
+
+    a {
+        font-size: rem-calc(14);
+        margin-left: rem-calc(0);
+        margin-right: rem-calc(0);
+        font-weight: 400;
+        color: #000;
+        border-radius: 100%;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: none;
+            color: $dark-gray;
+
+            path {
+                fill: #444 !important;
+            }
+        }
+    }
+
+    &-previous {
+        font-size: rem-calc(0);
+        cursor: pointer;
+    }
+
+    .pagination-next a::after,
+    .pagination-next.disabled::after,
+    .pagination-previous a::before,
+    .pagination-previous.disabled::before {
+        display: none;
+    }
+
+    &-next {
+        cursor: pointer;
+    }
+
+    .current {
+        font-size: rem-calc(14);
+        font-weight: 400;
+        background: #000;
+        padding-left: rem-calc(0);
+        padding-right: rem-calc(0);
+        text-align: center;
+        width: rem-calc(26);
+        height: rem-calc(26);
+        border-radius: 100%;
+        color: $white;
+    }
+    @include breakpoint(small only) {
+        justify-content: center;
+    }
+}

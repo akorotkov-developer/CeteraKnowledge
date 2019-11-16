@@ -1,0 +1,7 @@
+mixin art(array)
+  ul.art
+    each title,index in array
+      if index==0
+        li.art__item.art__item_active= title
+      else
+        li.art__item: a(href='#' title='').art__link= title

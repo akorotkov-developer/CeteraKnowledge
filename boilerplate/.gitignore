@@ -1,0 +1,10 @@
+# common, PHPStorm
+.DS_Store
+.idea/*
+Thumbs.db
+
+*.swp
+*.sql
+
+www/local/config/.rodzeta.redirect
+

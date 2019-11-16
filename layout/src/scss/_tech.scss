@@ -1,0 +1,136 @@
+.tech {
+    background: $white;
+    box-shadow: rem-calc(0 4 30) rgba(0, 0, 0, 0.1);
+    border-radius: rem-calc(4);
+    margin-bottom: rem-calc(16);
+
+    &:active,
+    &:focus,
+    &:hover {
+        .tech__info {
+            margin-top: rem-calc(-60);
+        }
+
+        .tech__text {
+            height: rem-calc(47);
+            margin-top: rem-calc(-12);
+            margin-bottom: rem-calc(25);
+        }
+    }
+
+    &__wrap {
+        height: rem-calc(230);
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__title {
+        font-size: rem-calc(20);
+        font-weight: 600;
+        line-height: 1.32;
+        margin-bottom: rem-calc(28);
+    }
+
+    &__text {
+        transition: 0.3s;
+        font-size: rem-calc(15);
+        font-weight: 400;
+        height: 0;
+        margin-bottom: rem-calc(0);
+        overflow: hidden;
+    }
+
+    &__cat {
+        position: absolute;
+        display: inline-block;
+        background: $primary-color;
+        border-radius: rem-calc(4);
+        left: rem-calc(30);
+        padding: rem-calc(1) rem-calc(10) rem-calc(2);
+        top: rem-calc(20);
+        color: $black;
+        font-size: rem-calc(14);
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $dark-gray;
+        }
+    }
+
+    &__date {
+        font-size: rem-calc(14);
+        padding-top: rem-calc(4);
+        color: #000;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    &__info {
+        display: block;
+        width: 100%;
+        color: $black;
+        transition: 0.3s;
+        z-index: 3;
+        position: relative;
+        padding-bottom: rem-calc(20);
+        margin-top: 0;
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);
+        padding-top: rem-calc(25);
+        background: $white;
+    }
+    @include breakpoint(medium down) {
+        &:active,
+        &:focus,
+        &:hover {
+            .tech__text {
+                margin-top: rem-calc(0);
+                margin-bottom: rem-calc(5);
+                height: auto;
+            }
+
+            .tech__info {
+                margin-top: rem-calc(0);
+            }
+        }
+
+        &__cat {
+            padding-top: rem-calc(0);
+            padding-bottom: rem-calc(0);
+            top: rem-calc(13);
+            left: rem-calc(17);
+            font-size: rem-calc(10);
+            background: $white;
+        }
+
+        &__title {
+            font-size: rem-calc(14);
+            margin-bottom: rem-calc(7);
+        }
+
+        &__go {
+            svg {
+                width: rem-calc(14);
+                height: rem-calc(14);
+            }
+        }
+
+        &__text {
+            font-size: rem-calc(13);
+            font-weight: 400;
+            height: auto;
+            margin-top: rem-calc(0);
+            margin-bottom: rem-calc(5);
+        }
+
+        &__info {
+            padding: rem-calc(15) rem-calc(12) rem-calc(10);
+        }
+
+        &__wrap {
+            height: rem-calc(135);
+        }
+    }
+}

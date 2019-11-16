@@ -1,0 +1,13 @@
+#add-to-favourites-auth-popup.reveal(data-reveal)
+    .grid-x.grid-padding-x
+        .show-for-medium.medium-12.cell
+            img(src='./i/photo.svg' alt='изображение')
+
+        .medium-12.text-center.cell
+            h3 Товар добавлен в список любимых товаров!
+            p Чтобы сохранить список, вам нужно:
+            +button('Войти','button_secondary button_expanded','login.html')
+      
+            p или
+            +button('Зарегистрироваться','button_secondary button_expanded','login.html')
+    +close-button

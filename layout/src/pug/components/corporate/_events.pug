@@ -1,0 +1,14 @@
+.grid-container: .grid-x.grid-padding-x
+  .medium-16.cell
+    h2 События компании
+  .medium-8.cell.medium-text-right
+    +button('Все события <i class="fas fa-long-arrow-alt-right canv"></i>')
+.grid-container(data-equalizer='title', data-equalize-by-row='true'): .grid-x.grid-padding-x.medium-up-2.large-up-4(data-equalizer='events', data-equalize-by-row='true')
+  +event('Приняли на комплексное обслуживание новый сайт', 'events', false,'title')
+  +event('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events', true,'title')
+  +event('Приняли на комплексное обслуживание новый сайт', 'events', true,'title')
+  +event('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events', true,'title')
+  +event('Подписан договор на разработку сайта с РПК «Престо»', 'events', true,'title')
+  +event('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events', true,'title')
+  +event('Подписан договор на разработку сайта с РПК «Престо»', 'events', true,'title')
+  +event('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events', true,'title')

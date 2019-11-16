@@ -1,0 +1,42 @@
+.charge {
+    background-size: cover;
+    background-position: center;
+    padding-bottom: rem-calc(71);
+    padding-top: rem-calc(59);
+
+    &__logo {
+        svg {
+            width: rem-calc(122);
+            height: rem-calc(18);
+
+            path {
+                fill: $primary-color;
+            }
+        }
+    }
+
+    &__title {
+        font-size: rem-calc(50);
+        color: $primary-color;
+        font-weight: 700;
+    }
+    @include breakpoint(medium down) {
+        &__title {
+            font-size: rem-calc(26);
+        }
+    }
+      @include breakpoint(small only) {
+        background-position: right rem-calc(-120) center;
+        padding-top: rem-calc(20);
+        padding-bottom: rem-calc(20);
+        &__title {
+          font-size: rem-calc(20);
+line-height: 1.2;
+        }
+      &__logo {
+        svg {
+          width: rem-calc(68);
+          height: rem-calc(10);
+        }
+      } }
+}

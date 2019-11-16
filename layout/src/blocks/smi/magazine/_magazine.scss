@@ -1,0 +1,10 @@
+.magazine {
+  @include margin-level(bottom,red);
+
+  &__img {
+    @include margin-level(bottom,blue);
+    width: 100%;
+    height: rem-calc(280);
+    background: $light-gray;
+  }
+}

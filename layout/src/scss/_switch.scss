@@ -1,0 +1,50 @@
+.switch {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: rem-calc(20);
+
+    &__info {
+        color: #000;
+        font-size: rem-calc(16);
+        display: block;
+        margin-left: rem-calc(15);
+        cursor: pointer;
+        height: rem-calc(24);
+        font-weight: 600;
+    }
+
+    input:checked ~ .switch-paddle::after {
+        right: rem-calc(17);
+        left: auto;
+    }
+
+    &-paddle {
+        position: relative;
+        width: rem-calc(40);
+        height: rem-calc(24);
+        background: #CAD2D5;
+        border-radius: rem-calc(48);
+
+        &:after {
+            width: rem-calc(22);
+            height: rem-calc(22);
+            border-radius: 50%;
+            background: $white;
+            left: auto;
+            right: rem-calc(1);
+            top: rem-calc(1);
+        }
+    }
+    @include breakpoint(small only) {
+        flex-flow: row nowrap;
+
+        &__info {
+            font-size: rem-calc(12);
+            font-weight: 400;
+            line-height: 1.2;
+            width: rem-calc(110);
+            margin-left: rem-calc(10);
+        }
+    }
+}

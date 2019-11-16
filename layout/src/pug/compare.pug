@@ -1,0 +1,85 @@
+extends shop-index
+
+block page
+  .grid-container
+    .grid-x.grid-padding-x
+      .cell
+        a(href="#").back.back_info
+          include components/common/_back
+      .cell.large-auto.medium-auto
+        h1 Сравнение товаров
+      .cell.medium-shrink
+        a(data-toggle="example-dropdown-1").button.button_hollow.button_drop Газонокосилки
+          span.button__num 6
+        .dropdown-pane#example-dropdown-1(data-dropdown )
+          ul
+            li Газонокосилка 1
+            li Газонокосилка 2
+            li Газонокосилка 3
+  .compare
+    .grid-container.compare__container
+      .grid-x.grid-padding-x
+        .medium-auto.cell.small-15
+          .switch
+            input#exampleSwitch.switch-input(type='checkbox', name='exampleSwitch')
+            label.switch-paddle(for='exampleSwitch')
+            span.switch__info Только отличающиеся
+              
+
+        .medium-shrink.cell.small-9
+          a(href="#").compare__clear
+            include ../images/trash-2.svg
+            span.compare__lint Очистить список
+          .compare__arr.compare__arr_left.hide
+            include ../images/arr-compare.svg      
+          .compare__arr.compare__arr_right
+            include ../images/arr-compare.svg      
+  
+    .compare__wrap
+      .compare__carousel
+        for i in [1,2,3,4,5,6,7,8]
+          .compare__slide
+            .compare__index
+              span.compare__num #{i}
+              |  из 8
+            +prod-compare
+      .bike: .bike__wrap
+        for i in [1,2,3,4,5,6,7,8]
+          .bike__slide
+            
+            .bike__main
+              .grid-x.grid-padding-x
+                .cell
+                  .bike__index
+                    span.bike__num #{i}
+                    |  из 8
+                .medium-15.cell      
+                  .bike__title Газонокосилка бензиновая несамоходная «Cub Cadet» CC LM1 AP42
+                  .bike__price от 21 888 ₽
+                  
+                .small-9.cell.hide-for-small-only
+                  .bike__picture
+                    img(src="./i/g1.png", alt="").bike__img
+      .compare__data
+        .acc.is-active
+          .acc__title
+            .acc__text Основные характеристики
+            .acc__arr
+              include ../images/arr-3.svg
+          include components/common/_info
+        .acc.is-active
+          .acc__title
+            .acc__text Комплектация
+            .acc__arr
+              include ../images/arr-3.svg
+          include components/common/_info
+        .acc.is-active
+          .acc__title
+            .acc__text Цвет и вес
+            .acc__arr
+              include ../images/arr-3.svg
+          include components/common/_info
+          
+  .grid-container
+    a(href="#").back
+      include components/common/_back

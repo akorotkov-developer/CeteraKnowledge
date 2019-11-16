@@ -1,0 +1,23 @@
+#add-product-comment.reveal(data-reveal data-deep-link="true")
+  h2 Добавить свой отзыв
+
+  form
+    label 
+      span.picture Представьтесь
+      span.reveal__anon или автор комментария будет «аноним»
+    input(type='text')
+
+    label
+      span.picture Ваш email
+      span.reveal__anon если хотите узнавать о новых комментариях к этому товару
+    input(type='email')
+
+    label Ваша оценка товара
+    .sect
+      +rating
+
+    label Текст отзыва *
+    textarea(rows='3')
+    +button('Отправить отзыв','button_secondary')
+
+  +close-button

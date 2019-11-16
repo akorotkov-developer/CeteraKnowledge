@@ -1,0 +1,28 @@
+div(data-sticky-container)
+  .sticky(data-sticky data-anchor="order-container" data-sticky-on="medium" ): +callout('callout_st')
+    .grid-x.grid-padding-x.callout__info
+      .cell.small-10.callout__strong Товаров на
+      .cell.small-14.text-right.callout__strong
+        | 5000
+        i.fas.fa-ruble-sign.canv
+    hr
+    .grid-x.grid-padding-x.callout__info
+      .cell.small-10 НДС
+      .cell.small-14.text-right
+        | 900
+        i.fas.fa-ruble-sign.canv
+      .cell.callout__include 18%, включен в цену
+  
+    hr
+    .grid-x.grid-padding-x.callout__info
+      .cell.small-10 Доставка
+      .cell.small-14.text-right
+        | 5000
+        i.fas.fa-ruble-sign.canv
+
+    hr
+    .grid-x.grid-padding-x
+      .cell.small-10.callout__strong Итого
+      .cell.small-14.callout__sum.text-right
+        | 10000
+        i.fas.fa-ruble-sign.canv

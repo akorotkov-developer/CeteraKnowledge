@@ -1,0 +1,9 @@
+.law {
+    font-size: rem-calc(24);
+    line-height: 1.32;
+    margin-bottom: rem-calc(14);
+    font-weight: 700;
+    @include breakpoint(small only) {
+        font-size: rem-calc(20);
+    }
+}

@@ -1,0 +1,20 @@
+doctype html
+html.no-js(lang='ru')
+  include components/service/_head
+  body
+    .grid-container
+      .grid-x.grid-padding-x: .cell
+        .info
+        h1 Cetera Labs Wireframes
+    
+    .grid-container.info
+      .grid-x.grid-padding-x: .cell
+        ul.tabs#product-tabs-1(data-tabs, data-deep-link='true')
+        
+          li.tabs-title
+            a(href='#shop') Магазин
+
+        .tabs-content(data-tabs-content="product-tabs-1")
+          .tabs-panel#shop.is-active
+            include components/shop/_sitemap
+    include components/service/_js

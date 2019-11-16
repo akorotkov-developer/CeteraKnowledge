@@ -1,0 +1,39 @@
+mixin cities(city="Ярославль",addClass)
+  .cities-wrap
+    .overlay
+    .cities-general
+      span#cities-select.cities-select(class=addClass)
+        i.fas.fa-map-marker-alt.fa-lg
+        |  #{city}
+      #cities-container.cities-container
+        .cities-main-window
+          .cities-main-window-inner
+            span.cities-main-window-inner-title
+              | Выберите город
+            .cities-main-window-inner-search
+              input#searchCities(type='text', name='searchCities', placeholder='Начните вводить город')
+            #main-window-close.cities-container-close
+              i.fas.fa-times
+          #cities-main-window-list.cities-main-window-list.clearfix
+            a.cities-main-window-list-link(data-id='168', href='#')  Владимир
+            a.cities-main-window-list-link(data-id='174', href='#')  Вологда
+            a.cities-main-window-list-link(data-id='249', href='#')  Дзержинск
+            a.cities-main-window-list-link(data-id='330', href='#')  Иваново
+            a.cities-main-window-list-link(data-id='359', href='#')  Калуга
+            a.cities-main-window-list-link(data-id='403', href='#')  Кинешма
+            a.cities-main-window-list-link(data-id='452', href='#')  Кострома
+            a.cities-main-window-list-link(data-id='604', href='#')  Москва
+            a.cities-main-window-list-link(data-id='646', href='#')  Нижний Новгород
+            a.cities-main-window-list-link(data-id='814', href='#')  Рыбинск
+            a.cities-main-window-list-link(data-id='874', href='#')  Смоленск
+            a.cities-main-window-list-link(data-id='944', href='#')  Тамбов
+            a.cities-main-window-list-link(data-id='1049', href='#')  Череповец
+            a.cities-main-window-list-link(data-id='1111', href='#')  Ярославль
+      #cities-container-region.cities-container-region
+        .cities-container-region-inner
+          span.cities-container-region-inner-city
+            | Ваш город — 
+            strong  Ярославль? 
+          .expanded.button-group.button-cities-group
+            input#button-ok.button.button-cities-yes(type='button', value='Да')
+            input#button-another.button.quaternary.button_quaternary(type='button', value='Другой город')

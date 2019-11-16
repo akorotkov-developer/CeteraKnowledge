@@ -1,0 +1,42 @@
+extends shop-index
+
+block page
+    .hide-for-small-only: +breadcrumbs(['Главная','Статьи'])
+    .grid-container.sieve
+        .grid-x.grid-padding-x
+            .cell
+                h1 Статьи
+            .cell
+              a(href="#").button.button_label.button_right самоходные
+              a(href="#").button.button_label.button_right газонокосилки   
+              a(href="#").button.button_label.button_right садовый трактор
+              a(href="#").button.button_label.button_right сервис
+              a(href="#").button.button_label.button_right ремонт  
+              a(href="#").button.button_label.button_right трактора с выбросом   
+    .grid-container.info      
+      .grid-x.grid-padding-x.large-up-3.medium-up-2
+        for i in [1,2,3]
+          .cell
+            .tech
+              .tech__wrap(style="background-image:url(./i/t44.jpg);")
+                
+              a(href="#").tech__info
+                .tech__title.js-equalize-1 Выбор газонокосилки
+                .tech__text Небольшой фото-отчет с прошедшего обучения в офисе компании
+                include components/common/_date
+          .cell
+            .tech
+              .tech__wrap(style="background-image:url(./i/t2.jpg);")
+                
+              a(href="#").tech__info
+                .tech__title.js-equalize-1 Выбор газонокосилки
+                .tech__text Небольшой фото-отчет с прошедшего обучения в офисе компании
+                include components/common/_date
+          .cell
+            .tech
+              .tech__wrap(style="background-image:url(./i/t1.jpg);")
+                
+              a(href="#").tech__info
+                .tech__title.js-equalize-1 Выбор газонокосилки
+                .tech__text Небольшой фото-отчет с прошедшего обучения в офисе компании
+                include components/common/_date

@@ -1,0 +1,75 @@
+$search-input-padding: rem-calc(5);
+
+.search {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+  margin: 0;
+
+  .search__input {
+    width: 100%;
+    border: 0;
+    padding: $search-input-padding;
+    line-height: $global-lineheight;
+    height: $global-input-height;
+    margin: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    min-width: 0;
+    white-space: nowrap;
+    border-radius: $global-radius 0 0 $global-radius;
+
+    &:focus,
+    &:hover {
+      border: 0;
+    }
+
+    &_border {
+      border: rem-calc(1) solid $medium-gray;
+      border-right: rem-calc(0);
+
+
+      &:focus,
+      &:hover {
+        border: rem-calc(1) solid $black;
+        border-right: rem-calc(0);
+      }
+    }
+  }
+
+  &__cont {
+    white-space: nowrap;
+    border-radius: $global-radius $global-radius 0 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin: rem-calc(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
+  .search__button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: $white;
+    height: $global-input-height;
+    width: $global-input-height;
+    color: map-get($foundation-palette, secondary);
+    align-self: stretch;
+    height: auto;
+    border-radius: $global-radius $global-radius 0 0;
+    font-size: rem-calc(16);
+  }
+  @include breakpoint(medium down) {
+    margin: 6 * $global-margin 0 0;
+  }
+  @include breakpoint(small only) {
+    margin: rem-calc(0);
+  }
+}

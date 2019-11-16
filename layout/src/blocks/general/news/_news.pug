@@ -1,0 +1,16 @@
+mixin news(title,eq)
+  .cell.news
+    .grid-x
+      .cell.small-5.medium-24
+        img.news__img(src='./i/photo.svg' alt='Новый сайт')
+      .cell.small-18.medium-24.small-offset-1.medium-offset-0
+        a(data-equalizer-watch=eq href='#').news__title
+          if title
+            | #{title}
+          else  
+            | Приняли на комплексное обслуживание новый сайт
+    .show-for-medium        
+      if block  
+        block
+      else
+        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».

@@ -1,0 +1,27 @@
+.port {
+    background: #F2F6F8;
+    border-radius: rem-calc(5);
+    padding: rem-calc(25 30);
+    margin-bottom: rem-calc(27);
+
+    &__title {
+        font-size: rem-calc(17);
+        font-weight: 700;
+        padding-top: rem-calc(4);
+        line-height: 1.4;
+    }
+
+    &__price {
+        font-size: rem-calc(24);
+        font-weight: 400;
+    }
+
+    &__line {
+        color: #666E6F;
+        font-size: rem-calc(12);
+        line-height: 1;
+        font-weight: 400;
+    }
+    @include breakpoint(small only) {
+  }
+}

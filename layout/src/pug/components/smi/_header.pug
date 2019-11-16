@@ -1,0 +1,32 @@
+header.header
+  .grid-container: .grid-x.grid-padding-x
+    .cell.small-15.large-10.medium-12.header__info
+      a(href='#' title='')
+        img(src='./images/logo.svg',  alt='logo').header__logo.header__logo_mini
+      span.header__age 18+
+    .show-for-small-only.small-9.cell
+      +rubric('menu') 
+    .large-auto.medium-12.cell.text-center.medium-text-right
+      +cities('Москва','cities-select_black')
+      
+      i.fas.fa-thermometer-half.picture
+      | -1&deg;C, снег
+      div
+        span.picture Курс ЦБ на 30.12:
+        span.header__alert
+          i.fas.fa-dollar-sign.picture
+          span 77.05
+          i.fas.fa-long-arrow-alt-down.canv
+        span.header__success
+          i.fas.fa-euro-sign.picture
+          span 88.20
+          i.fas.fa-long-arrow-alt-up.canv
+
+include _reveal-reg
+
+.rubric
+  .grid-container: .grid-x.grid-padding-x
+    .cell
+      div#menu
+        +cat(['Экономика','Финансы','ТЭК','Интернет','Промышленность','Транспорт','Наука','ИТ и Медиа','Потребительские рынки','ВПК','Бренды','Спорт','Видео','Интервью','Пресс-релизы','Отставки и назначения','Мнения'])
+      

@@ -1,0 +1,11 @@
+.cube {
+    padding-top: rem-calc(85);
+    padding-bottom: rem-calc(95);
+    @include breakpoint(medium down) {
+        padding-bottom: rem-calc(60);
+    }
+    @include breakpoint(small only) {
+      padding-top: rem-calc(60);
+        padding-bottom: rem-calc(40);
+    }
+}

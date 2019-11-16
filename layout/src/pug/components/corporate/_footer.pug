@@ -1,0 +1,34 @@
+footer.footer
+  .grid-container: .grid-x.grid-padding-x
+    .medium-12.large-6.medium-order-1.large-order-1.cell.footer__block
+      a(href='#')
+        img(src='./images/logo_white.svg',  alt='logo').footer__logo
+    nav.medium-12.large-6.medium-order-3.large-order-2.cell.footer__nav
+      h6 Навигация
+      each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
+        a.footer__link(href='#')= title
+    .medium-12.large-6.medium-order-2.large-order-3.cell.footer__nav
+      h6 Адрес офиса
+      p Проспект Ленина, дом 25, 6 этаж, офис 606 (Адрес для курьера)
+      h6 Почтовый адрес
+      p ООО «Цетера Лабс» Куда: 150040, г.Ярославль, п/о 40, а/я 62
+    .medium-12.large-6.medium-order-4.large-order-4.cell.footer__nav
+      h6 Телефон
+      div
+        a.footer__link(href='tel:88007755293') 8 (800) 775-52-93
+        div Новые клиенты — нажмите «0»
+        div Текущие клиенты — добавочные и мобильные телефоны проектных менеджеров
+      h6 Email
+      div
+        a.footer__link(href='mailto:welcome@ceteralabs.ru' title='') welcome@ceteralabs.ru
+        div Для новых клиентов
+      div
+        a.footer__link(href='mailto:support@ceteralabs.ru' title='') support@ceteralabs.ru
+        div Для текущих клиентов
+      div
+        a.footer__link(href='mailto:hr@ceteralabs.ru' title='') hr@ceteralabs.ru
+        div Для кандидатов в коллеги
+  .grid-container: .grid-x.grid-padding-x: .cell.footer__soc
+    include ../common/_soc
+
+  include ../common/_footer-info

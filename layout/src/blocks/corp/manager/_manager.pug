@@ -1,0 +1,20 @@
+mixin manager(title,position)
+  .manager
+    .manager__block
+      img(src='./i/photo.svg', alt='1').manager__img
+    h5(data-equalizer-watch)
+      if title
+        | #{title}
+      else  
+        | Алена Ратникова 
+        
+    .manager__text
+      if position
+        | #{position}
+      else
+        | Менеджер по продажам
+    .manager__block
+      include ../../../pug/components/corporate/_soc
+    if block
+      block
+      

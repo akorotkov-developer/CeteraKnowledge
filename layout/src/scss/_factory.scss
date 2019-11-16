@@ -1,0 +1,16 @@
+.factory {
+    margin-bottom: rem-calc(20);
+
+    &__text {
+        font-weight: 300;
+        font-size: rem-calc(14);
+        margin-bottom: rem-calc(12);
+    }
+    @include breakpoint(medium down) {
+        &__text {
+            font-weight: 300;
+            margin-bottom: rem-calc(7);
+            font-size: rem-calc(11);
+        }
+    }
+}

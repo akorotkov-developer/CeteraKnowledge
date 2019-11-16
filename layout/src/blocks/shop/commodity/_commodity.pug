@@ -1,0 +1,61 @@
+mixin commodity(discount, onDemand, inCart, inFavourites)
+  .grid-x.grid-padding-x.commodity
+    .cell.small-8.medium-6
+      .commodity__img: img(src='./i/photo.svg' alt='Товар')
+    .cell.small-16.medium-18
+      .grid-x.grid-padding-x
+        .cell.medium-14
+          h5
+            if discount
+              +label('<i class="far fa-star picture"></i>Акция','label_action')
+                
+            a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+          a.commodity__cat(href='shop-catalog.html') Шуроповерты
+        .cell.medium-10.large-8.large-offset-2
+          if onDemand
+            .commodity__no Нет в наличии&nbsp;
+          else
+            .commodity__price
+              | 10&nbsp;250&nbsp;
+              i.fas.fa-ruble-sign
+            if discount
+              .commodity__old
+                | 9&nbsp;750&nbsp;
+                i.fas.fa-ruble-sign
+      .grid-x.grid-padding-x
+        .cell.medium-14.align-self-middle
+          ul.hide-for-small-only
+            li Гарантия: 1 год
+            li Мощность: 1000W
+            li Цвет: Красный
+            li Страна: Китай
+          .commodity__info
+            if !inFavourites
+              a.commodity__favor(data-open="add-to-favourites-auth-popup")
+                i.far.fa-heart.picture
+                | Запомнить
+
+            else
+              a.commodity__favor(href='' title='Удалить из запомненных')
+                i.fas.fa-heart.picture
+                | Запомнено
+            a.commodity__favor(href='shop-compare.html' title='')
+              i.fas.fa-balance-scale.picture
+              | Сравнить
+        .cell.medium-10.large-8.large-offset-2.align-self-bottom
+          if onDemand
+            .commodity__info
+              a(href='#' title='')
+                i.far.fa-bell.picture
+                | Заказать
+          else
+            .commodity__info
+              if inCart
+                a(href='shop-cart.html' title='')
+                  span.commodity__favor
+                    i.fas.fa-check.fa-lg.picture
+                    | В корзине
+              else
+                +button('<i class="fas fa-shopping-basket picture"></i>Купить','button_hollow','shop-cart.html')
+    
+                  

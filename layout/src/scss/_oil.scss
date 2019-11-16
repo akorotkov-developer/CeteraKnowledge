@@ -1,0 +1,86 @@
+.oil {
+    padding-top: rem-calc(50);
+    color: $white;
+    margin-bottom: rem-calc(50);
+
+    &__date {
+        font-weight: 500;
+        font-size: rem-calc(24);
+        margin-bottom: rem-calc(21);
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: rem-calc(60);
+        margin-bottom: rem-calc(17);
+        line-height: 1.08;
+    }
+
+    &__buy {
+        font-size: rem-calc(24);
+        margin-bottom: rem-calc(37);
+        font-weight: 400;
+    }
+
+    &__wrap {
+        padding-top: rem-calc(77);
+        overflow: hidden;
+        padding-left: rem-calc(90);
+      padding-bottom: rem-calc(64);
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    @include breakpoint(xlarge down) {
+        .slick-next {
+            right: rem-calc(10);
+        }
+
+        .slick-prev {
+            left: rem-calc(10);
+        }
+    }
+    @include breakpoint(medium down) {
+      padding-top: rem-calc(20);
+      margin-left: rem-calc(-8);
+      margin-right: rem-calc(-8);
+        &__wrap {
+            padding-left: rem-calc(8);
+            padding-right: rem-calc(8);
+            padding-top: rem-calc(17);
+            height: auto;
+            padding-bottom: rem-calc(10);
+        }
+
+        &__title {
+            font-size: rem-calc(17);
+            margin-bottom: rem-calc(12);
+        }
+
+        &__buy {
+            font-size: rem-calc(12);
+            margin-bottom: rem-calc(17);
+        }
+
+        .slick-arrow {
+            width: rem-calc(30);
+            height: rem-calc(30);
+            bottom: rem-calc(30);
+            top: auto;
+        }
+
+        .slick-next {
+            right: rem-calc(16);
+        }
+
+        .slick-prev {
+            left: auto;
+            right: rem-calc(70);
+        }
+    }
+    @include breakpoint(small only) {
+        &__date {
+            display: none;
+        }
+    }
+}

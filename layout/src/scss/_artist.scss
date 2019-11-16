@@ -1,0 +1,10 @@
+.artist {
+    width: rem-calc(1440);
+    max-width: 100%;
+    padding-left: rem-calc(0);
+    padding-right: rem-calc(0);
+    margin-bottom: rem-calc(100);
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(50);
+    }
+}

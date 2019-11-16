@@ -1,0 +1,44 @@
+.slider {
+    background: #CAD2D5;
+    height: rem-calc(1);
+    position: relative;
+    margin-bottom: rem-calc(42);
+
+    &__max,
+    &__min {
+        position: absolute;
+        font-size: rem-calc(12);
+        color: #929A9C;
+        font-weight: 400;
+        left: rem-calc(0);
+        bottom: rem-calc(-21);
+    }
+
+    &__max {
+        left: auto;
+        right: rem-calc(0);
+    }
+}
+
+.slider-fill {
+    background: #000;
+    height: rem-calc(1);
+}
+
+.slider-handle {
+    width: rem-calc(7);
+    height: rem-calc(7);
+    border-radius: rem-calc(7);
+    background: #000;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: none;
+    }
+}
+@include breakpoint(small only) {
+    .slider {
+        margin-bottom: rem-calc(32);
+    }
+}

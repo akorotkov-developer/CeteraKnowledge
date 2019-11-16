@@ -1,0 +1,26 @@
+extends shop-index
+
+block page
+  include components/common/_preloader
+  +breadcrumbs(['Главная','Инструкции'])
+  
+  .grid-container.info
+    .grid-x.grid-padding-x
+      .cell.large-auto.medium-auto
+        h1 Инструкции
+      .large-6.cell.medium-6.hide-for-small-only
+        form.mag
+          input(type="text",placeholder="Поиск").mag__input
+          button.mag__submit(type="submit")
+            include ../images/ss.svg
+      .cell
+        a(href="#").button.button_black.button_right Все       
+        a(href="#").button.button_hollow.button_right Газонокосилки
+        a(href="#").button.button_hollow.button_right Садовые трактора
+        a(href="#").button.button_hollow.button_right Садовые пылесосы
+        a(href="#").button.button_hollow Прочее
+        .sect.show-for-small-only
+    .grid-x.grid-padding-x.large-up-4.medium-up-2
+      for i in [1,2,3,4,5,6,7,8]
+        include components/common/_instr
+      

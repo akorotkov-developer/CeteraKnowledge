@@ -1,0 +1,11 @@
+mixin partners(array)
+  ul.partners
+    if array
+    else
+      - var array = ['О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация'];
+    each title,index in array
+      if index == 0
+        li.partners__item: a(href='#' title='').partners__link.partners__link_active= title
+      else  
+        li.partners__item: a(href='#' title='').partners__link= title
+  

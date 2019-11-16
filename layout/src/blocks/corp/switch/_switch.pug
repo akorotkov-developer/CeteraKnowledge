@@ -1,0 +1,9 @@
+mixin switch(title)
+  -var id =  Math.ceil(Math.random() * 1000);
+  .switch
+    input.switch-input(type='checkbox', name='exampleSwitch', id=id)
+    label.switch-paddle(for=id)
+      span.show-for-sr= title
+      span.switch-active(aria-hidden='true')
+      span.switch-inactive(aria-hidden='true')
+  p= title

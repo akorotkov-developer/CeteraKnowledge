@@ -1,0 +1,8 @@
+.grid-container: .grid-x.grid-padding-x
+  .medium-16.cell
+    h2 Новые проекты
+  .medium-8.cell.medium-text-right
+    +button('Все проекты<i class="fas fa-long-arrow-alt-right canv"></i>')
+.grid-container.info: .grid-x.grid-padding-x.medium-up-2.large-up-3(data-equalizer='projects' data-equalize-by-row='true')
+  each title in ['Бизнес-мода', 'Статистика больших данных', 'Мобильная разработка', 'Серверная защита', 'Развивающее приложение для детей', 'Анимация']
+    +project(title,'projects')

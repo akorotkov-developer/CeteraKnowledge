@@ -1,0 +1,14 @@
+.soc {
+    display: inline-block;
+    margin-left: rem-calc(4);
+    margin-right: rem-calc(4);
+
+    &:active,
+    &:focus,
+    &:hover {
+        opacity: 0.9;
+    }
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(14);
+    }
+}

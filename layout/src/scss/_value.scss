@@ -1,0 +1,36 @@
+.value {
+    position: relative;
+
+    &__placeholder {
+        transition: 0.3s;
+        position: absolute;
+        top: rem-calc(3);
+        left: rem-calc(13);
+        color: #666E6F;
+        font-size: rem-calc(12);
+    }
+
+    &__area {
+        font-size: rem-calc(16);
+        margin-bottom: rem-calc(30);
+        color: #000;
+        padding-top: rem-calc(18);
+        padding-bottom: rem-calc(7);
+        font-weight: 400;
+        height: rem-calc(163);
+        padding-left: rem-calc(13);
+        padding-right: rem-calc(13);
+        border: rem-calc(1) solid $white;
+    }
+
+    &__input {
+        font-size: rem-calc(16);
+        color: #000;
+        padding-top: rem-calc(18);
+        padding-bottom: rem-calc(7);
+        font-weight: 400;
+        padding-left: rem-calc(13);
+        padding-right: rem-calc(13);
+        border: rem-calc(1) solid $white;
+    }
+}

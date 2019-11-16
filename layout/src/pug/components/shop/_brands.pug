@@ -1,0 +1,11 @@
+.info.grid-container: .grid-x.grid-padding-x
+  .medium-16.cell
+    h2 Бренды
+  .medium-8.cell.medium-text-right
+    +button('Все Бренды<i class="fas fa-long-arrow-alt-right canv"></i>','button_hollow')
+.grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.large-up-8
+  - var n = 0
+  while n < 8
+    .cell
+      img.sect(src='./i/photo.svg' alt=n)
+    - n++
