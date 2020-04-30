@@ -37,7 +37,7 @@
     "gulp-tinypng-unlimited": "^1.0.3",
     "gulp-uglify": "^3.0.2",
     "gulp-wait2": "^0.0.5",
-    "jquery": "~3.4.1",
+    "jquery": "~3.5.0",
     "jstransformer-uglify-js": "^1.2.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "motion-ui": "~2.0.3",
